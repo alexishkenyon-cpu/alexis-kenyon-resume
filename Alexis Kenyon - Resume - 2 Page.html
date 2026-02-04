@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://rawcdn.githack.com/alexishkenyon-cpu/ice-advocacy-tool/0f45425/alexis-kenyon-resume-editable.html -->
+<html lang="en" class="hentry"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexis Kenyon - Resume (Version 4)</title>
+    <link href="css2" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        /* Instruction Banner */
+        .edit-banner {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .edit-banner strong {
+            font-weight: 700;
+        }
+
+        .hide-for-print {
+            display: block;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header-bar {
+            background: #fafafa;
+            border-bottom: 1px solid #eee;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #555;
+        }
+
+        .header-bar a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        [contenteditable="true"] {
+            outline: none;
+            border-radius: 3px;
+            transition: background 0.2s;
+        }
+
+        [contenteditable="true"]:hover {
+            background: rgba(233, 30, 99, 0.1);
+        }
+
+        [contenteditable="true"]:focus {
+            background: rgba(233, 30, 99, 0.2);
+        }
+
+        .main-content {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 240px;
+            background: #fafafa;
+            padding: 20px 15px;
+            border-right: 1px solid #eee;
+        }
+
+        .profile-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 45%;
+            border: 3px solid #E91E63;
+        }
+
+        .sidebar-section {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #E91E63;
+        }
+
+        /* Skills grid - clean 2-column layout */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 12px;
+        }
+
+        .skill-item {
+            font-size: 10px;
+            color: #333;
+            padding: 2px 0;
+        }
+
+        /* Education text style */
+        .education-text {
+            margin-bottom: 8px;
+        }
+
+        .edu-degree {
+            font-size: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .edu-school {
+            font-size: 9px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        /* Name section with accent */
+        .name-section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .name-accent {
+            width: 4px;
+            background: #999;
+            margin-right: 12px;
+            align-self: stretch;
+        }
+
+        .name-text {
+            flex: 1;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: #333;
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+
+        .software-item span {
+            font-size: 7px;
+            text-align: center;
+            color: #555;
+            line-height: 1.2;
+            max-width: 50px;
+        }
+
+        .education-item {
+            margin-bottom: 14px;
+        }
+
+        .degree {
+            font-size: 9px;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .school-name {
+            font-size: 8px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .school-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .school-logo {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .school-info {
+            flex: 1;
+        }
+
+        .school-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.3;
+            margin-bottom: 2px;
+        }
+
+        .expertise-list {
+            list-style: none;
+        }
+
+        .expertise-list li {
+            font-size: 10px;
+            margin-bottom: 4px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .expertise-list li::before {
+            content: "\2022";
+            color: #E91E63;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .award-item {
+            font-size: 9px;
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .award-item::before {
+            content: "\1F3C6";
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px 25px;
+        }
+
+        .name-section {
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 900;
+            color: #E91E63;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+        }
+
+        .about-section {
+            margin-bottom: 20px;
+        }
+
+        .about-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .about-text {
+            font-size: 11px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .experience-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #E91E63;
+        }
+
+        .experience-item {
+            margin-bottom: 18px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .exp-date {
+            width: 70px;
+            flex-shrink: 0;
+            font-size: 10px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .exp-content {
+            flex: 1;
+        }
+
+        .exp-logo {
+            height: 28px;
+            max-width: 100px;
+            object-fit: contain;
+            margin-bottom: 6px;
+        }
+
+        .exp-logos {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .exp-logos img {
+            height: 24px;
+            max-width: 60px;
+            object-fit: contain;
+        }
+
+        .school-logo {
+            height: 30px;
+            max-width: 120px;
+            object-fit: contain;
+            margin-bottom: 6px;
+        }
+
+        .exp-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .exp-company {
+            font-size: 10px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+
+        .exp-bullets {
+            list-style: none;
+        }
+
+        .exp-bullets li {
+            font-size: 10px;
+            margin-bottom: 3px;
+            padding-left: 10px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .exp-bullets li::before {
+            content: "\2022";
+            color: #E91E63;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .skills-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .skills-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 9px;
+        }
+
+        .skill-category {
+            margin-bottom: 5px;
+        }
+
+        .skill-category strong {
+            color: #E91E63;
+        }
+
+        /* Style Toolbar */
+        .style-toolbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2d2d2d;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 200;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+            font-family: 'Montserrat', sans-serif;
+            flex-wrap: wrap;
+        }
+
+        .toolbar-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0 15px;
+            border-right: 1px solid #444;
+        }
+
+        .toolbar-group:last-child {
+            border-right: none;
+        }
+
+        .toolbar-label {
+            color: #aaa;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .toolbar-btn {
+            background: #444;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .toolbar-btn:hover {
+            background: #E91E63;
+        }
+
+        .toolbar-btn:active {
+            background: #C2185B;
+        }
+
+        .toolbar-btn.small {
+            padding: 6px 10px;
+            font-size: 12px;
+        }
+
+        .color-picker-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .color-input {
+            width: 36px;
+            height: 36px;
+            border: 2px solid #555;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .color-input::-webkit-color-swatch-wrapper {
+            padding: 2px;
+        }
+
+        .color-input::-webkit-color-swatch {
+            border-radius: 2px;
+        }
+
+        .size-controls {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .size-display {
+            color: white;
+            font-size: 12px;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .move-controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .move-btn {
+            background: #444;
+            border: none;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .move-btn:hover {
+            background: #E91E63;
+        }
+
+        .selected-indicator {
+            color: #4CAF50;
+            font-size: 11px;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .no-selection {
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Add extra padding at bottom so content isn't hidden by toolbar */
+        body {
+            padding-bottom: 80px;
+        }
+
+        @media print {
+            .edit-banner, .hide-for-print, .style-toolbar {
+                display: none !important;
+            }
+            body {
+                background: white;
+                padding-bottom: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+            }
+            [contenteditable="true"]:hover,
+            [contenteditable="true"]:focus {
+                background: transparent;
+            }
+            @page {
+                margin: 0.5in;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .page-2-header {
+                display: block !important;
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .page-2-header {
+            display: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+<meta name="readermode-active" content="true"><meta name="readermode-active" content="true"><meta name="readermode-active" content="true"></head>
+<div class="spoken-word spoken-word--active"><div class="spoken-word-playback-controls"><legend class="spoken-word-playback-controls__legend rm-d-none-i">Text to Speech</legend><button type="button" class="spoken-word-playback-controls__button wp-exclude-emoji spoken-word-playback-controls__button--emoji rm-d-none-i" aria-label="Play">▶</button><button type="button" class="spoken-word-playback-controls__button wp-exclude-emoji spoken-word-playback-controls__button--emoji rm-d-none-i" aria-label="Previous">⏪</button><button type="button" class="spoken-word-playback-controls__button wp-exclude-emoji spoken-word-playback-controls__button--emoji rm-d-none-i" aria-label="Forward">⏩</button><button type="button" class="spoken-word-playback-controls__button wp-exclude-emoji spoken-word-playback-controls__button--emoji rm-d-none-i" aria-label="Settings">⚙</button><dialog class="spoken-word-playback-controls__dialog"><div class="spoken-word-playback-controls__heading"><label>Voice options</label></div><p><label class="spoken-word-playback-controls__label" for="input1-rate">Rate:</label> <input id="input1-rate" class="spoken-word-playback-controls__input form-control rm-input" type="number" data-prop="rate" step="0.1" min="0.1" max="10"></p><p><label class="spoken-word-playback-controls__label" for="input1-pitch">Pitch:</label> <input id="input1-pitch" class="spoken-word-playback-controls__input form-control rm-input" type="number" data-prop="pitch" min="0" max="2" step="0.1"></p><p><label class="spoken-word-playback-controls__label" for="input1-voice-en">Voice:</label> <select id="input1-voice-en" class="spoken-word-playback-controls__input rm-select-placeholder" data-language="en"><option value="Aaron">🇺🇸 Aaron</option><option value="Albert">🇺🇸 Albert</option><option value="Alice">🇮🇹 Alice</option><option value="Alva">🇸🇪 Alva</option><option value="Amira">🇲🇾 Amira</option><option value="Amélie">🇨🇦 Amélie</option><option value="Anna">🇩🇪 Anna</option><option value="Arthur">🇬🇧 Arthur</option><option value="Bad News">🇺🇸 Bad News</option><option value="Bahh">🇺🇸 Bahh</option><option value="Bells">🇺🇸 Bells</option><option value="Boing">🇺🇸 Boing</option><option value="Bubbles">🇺🇸 Bubbles</option><option value="Carmit">🇮🇱 Carmit</option><option value="Catherine">🇦🇺 Catherine</option><option value="Cellos">🇺🇸 Cellos</option><option value="Damayanti">🇮🇩 Damayanti</option><option value="Daniel (English (United Kingdom))">🇬🇧 Daniel (English (United Kingdom))</option><option value="Daniel (French (France))">🇫🇷 Daniel (French (France))</option><option value="Daria">🇧🇬 Daria</option><option value="Eddy (Chinese (China mainland))">🇨🇳 Eddy (Chinese (China mainland))</option><option value="Eddy (Chinese (Taiwan))">🇹🇼 Eddy (Chinese (Taiwan))</option><option value="Eddy (English (United Kingdom))">🇬🇧 Eddy (English (United Kingdom))</option><option value="Eddy (English (United States))">🇺🇸 Eddy (English (United States))</option><option value="Eddy (Finnish (Finland))">🇫🇮 Eddy (Finnish (Finland))</option><option value="Eddy (French (Canada))">🇨🇦 Eddy (French (Canada))</option><option value="Eddy (French (France))">🇫🇷 Eddy (French (France))</option><option value="Eddy (German (Germany))">🇩🇪 Eddy (German (Germany))</option><option value="Eddy (Italian (Italy))">🇮🇹 Eddy (Italian (Italy))</option><option value="Eddy (Japanese (Japan))">🇯🇵 Eddy (Japanese (Japan))</option><option value="Eddy (Korean (South Korea))">🇰🇷 Eddy (Korean (South Korea))</option><option value="Eddy (Portuguese (Brazil))">🇧🇷 Eddy (Portuguese (Brazil))</option><option value="Eddy (Spanish (Mexico))">🇲🇽 Eddy (Spanish (Mexico))</option><option value="Eddy (Spanish (Spain))">🇪🇸 Eddy (Spanish (Spain))</option><option value="Ellen">🇧🇪 Ellen</option><option value="Flo (Chinese (China mainland))">🇨🇳 Flo (Chinese (China mainland))</option><option value="Flo (Chinese (Taiwan))">🇹🇼 Flo (Chinese (Taiwan))</option><option value="Flo (English (United Kingdom))">🇬🇧 Flo (English (United Kingdom))</option><option value="Flo (English (United States))">🇺🇸 Flo (English (United States))</option><option value="Flo (Finnish (Finland))">🇫🇮 Flo (Finnish (Finland))</option><option value="Flo (French (Canada))">🇨🇦 Flo (French (Canada))</option><option value="Flo (French (France))">🇫🇷 Flo (French (France))</option><option value="Flo (German (Germany))">🇩🇪 Flo (German (Germany))</option><option value="Flo (Italian (Italy))">🇮🇹 Flo (Italian (Italy))</option><option value="Flo (Japanese (Japan))">🇯🇵 Flo (Japanese (Japan))</option><option value="Flo (Korean (South Korea))">🇰🇷 Flo (Korean (South Korea))</option><option value="Flo (Portuguese (Brazil))">🇧🇷 Flo (Portuguese (Brazil))</option><option value="Flo (Spanish (Mexico))">🇲🇽 Flo (Spanish (Mexico))</option><option value="Flo (Spanish (Spain))">🇪🇸 Flo (Spanish (Spain))</option><option value="Fred">🇺🇸 Fred</option><option value="Good News">🇺🇸 Good News</option><option value="Gordon">🇦🇺 Gordon</option><option value="Grandma (Chinese (China mainland))">🇨🇳 Grandma (Chinese (China mainland))</option><option value="Grandma (Chinese (Taiwan))">🇹🇼 Grandma (Chinese (Taiwan))</option><option value="Grandma (English (United Kingdom))">🇬🇧 Grandma (English (United Kingdom))</option><option value="Grandma (English (United States))">🇺🇸 Grandma (English (United States))</option><option value="Grandma (Finnish (Finland))">🇫🇮 Grandma (Finnish (Finland))</option><option value="Grandma (French (Canada))">🇨🇦 Grandma (French (Canada))</option><option value="Grandma (French (France))">🇫🇷 Grandma (French (France))</option><option value="Grandma (German (Germany))">🇩🇪 Grandma (German (Germany))</option><option value="Grandma (Italian (Italy))">🇮🇹 Grandma (Italian (Italy))</option><option value="Grandma (Japanese (Japan))">🇯🇵 Grandma (Japanese (Japan))</option><option value="Grandma (Korean (South Korea))">🇰🇷 Grandma (Korean (South Korea))</option><option value="Grandma (Portuguese (Brazil))">🇧🇷 Grandma (Portuguese (Brazil))</option><option value="Grandma (Spanish (Mexico))">🇲🇽 Grandma (Spanish (Mexico))</option><option value="Grandma (Spanish (Spain))">🇪🇸 Grandma (Spanish (Spain))</option><option value="Grandpa (Chinese (China mainland))">🇨🇳 Grandpa (Chinese (China mainland))</option><option value="Grandpa (Chinese (Taiwan))">🇹🇼 Grandpa (Chinese (Taiwan))</option><option value="Grandpa (English (United Kingdom))">🇬🇧 Grandpa (English (United Kingdom))</option><option value="Grandpa (English (United States))">🇺🇸 Grandpa (English (United States))</option><option value="Grandpa (Finnish (Finland))">🇫🇮 Grandpa (Finnish (Finland))</option><option value="Grandpa (French (Canada))">🇨🇦 Grandpa (French (Canada))</option><option value="Grandpa (French (France))">🇫🇷 Grandpa (French (France))</option><option value="Grandpa (German (Germany))">🇩🇪 Grandpa (German (Germany))</option><option value="Grandpa (Italian (Italy))">🇮🇹 Grandpa (Italian (Italy))</option><option value="Grandpa (Japanese (Japan))">🇯🇵 Grandpa (Japanese (Japan))</option><option value="Grandpa (Korean (South Korea))">🇰🇷 Grandpa (Korean (South Korea))</option><option value="Grandpa (Portuguese (Brazil))">🇧🇷 Grandpa (Portuguese (Brazil))</option><option value="Grandpa (Spanish (Mexico))">🇲🇽 Grandpa (Spanish (Mexico))</option><option value="Grandpa (Spanish (Spain))">🇪🇸 Grandpa (Spanish (Spain))</option><option value="Hattori">🇯🇵 Hattori</option><option value="Helena">🇩🇪 Helena</option><option value="Ioana">🇷🇴 Ioana</option><option value="Jacques">🇫🇷 Jacques</option><option value="Jester">🇺🇸 Jester</option><option value="Joana">🇵🇹 Joana</option><option value="Junior">🇺🇸 Junior</option><option value="Kanya">🇹🇭 Kanya</option><option value="Karen">🇦🇺 Karen</option><option value="Kathy">🇺🇸 Kathy</option><option value="Kyoko">🇯🇵 Kyoko</option><option value="Lana">🇭🇷 Lana</option><option value="Laura">🇸🇰 Laura</option><option value="Lekha">🇮🇳 Lekha</option><option value="Lesya">🇺🇦 Lesya</option><option value="Li-Mu">🇨🇳 Li-Mu</option><option value="Linh">🇻🇳 Linh</option><option value="Luciana">🇧🇷 Luciana</option><option value="Majed">🇕🇕🇖 Majed</option><option value="Marie">🇫🇷 Marie</option><option value="Martha">🇬🇧 Martha</option><option value="Martin">🇩🇪 Martin</option><option value="Meijia">🇹🇼 Meijia</option><option value="Melina">🇬🇷 Melina</option><option value="Milena">🇷🇺 Milena</option><option value="Moira">🇮🇪 Moira</option><option value="Montse">🇪🇸 Montse</option><option value="Mónica">🇪🇸 Mónica</option><option value="Nicky">🇺🇸 Nicky</option><option value="Nora">🇳🇴 Nora</option><option value="O-Ren">🇯🇵 O-Ren</option><option value="Organ">🇺🇸 Organ</option><option value="Paulina">🇲🇽 Paulina</option><option value="Ralph">🇺🇸 Ralph</option><option value="Reed (Chinese (China mainland))">🇨🇳 Reed (Chinese (China mainland))</option><option value="Reed (Chinese (Taiwan))">🇹🇼 Reed (Chinese (Taiwan))</option><option value="Reed (English (United Kingdom))">🇬🇧 Reed (English (United Kingdom))</option><option value="Reed (English (United States))">🇺🇸 Reed (English (United States))</option><option value="Reed (Finnish (Finland))">🇫🇮 Reed (Finnish (Finland))</option><option value="Reed (French (Canada))">🇨🇦 Reed (French (Canada))</option><option value="Reed (German (Germany))">🇩🇪 Reed (German (Germany))</option><option value="Reed (Italian (Italy))">🇮🇹 Reed (Italian (Italy))</option><option value="Reed (Japanese (Japan))">🇯🇵 Reed (Japanese (Japan))</option><option value="Reed (Korean (South Korea))">🇰🇷 Reed (Korean (South Korea))</option><option value="Reed (Portuguese (Brazil))">🇧🇷 Reed (Portuguese (Brazil))</option><option value="Reed (Spanish (Mexico))">🇲🇽 Reed (Spanish (Mexico))</option><option value="Reed (Spanish (Spain))">🇪🇸 Reed (Spanish (Spain))</option><option value="Rishi">🇮🇳 Rishi</option><option value="Rocko (Chinese (China mainland))">🇨🇳 Rocko (Chinese (China mainland))</option><option value="Rocko (Chinese (Taiwan))">🇹🇼 Rocko (Chinese (Taiwan))</option><option value="Rocko (English (United Kingdom))">🇬🇧 Rocko (English (United Kingdom))</option><option value="Rocko (English (United States))">🇺🇸 Rocko (English (United States))</option><option value="Rocko (Finnish (Finland))">🇫🇮 Rocko (Finnish (Finland))</option><option value="Rocko (French (Canada))">🇨🇦 Rocko (French (Canada))</option><option value="Rocko (French (France))">🇫🇷 Rocko (French (France))</option><option value="Rocko (German (Germany))">🇩🇪 Rocko (German (Germany))</option><option value="Rocko (Italian (Italy))">🇮🇹 Rocko (Italian (Italy))</option><option value="Rocko (Japanese (Japan))">🇯🇵 Rocko (Japanese (Japan))</option><option value="Rocko (Korean (South Korea))">🇰🇷 Rocko (Korean (South Korea))</option><option value="Rocko (Portuguese (Brazil))">🇧🇷 Rocko (Portuguese (Brazil))</option><option value="Rocko (Spanish (Mexico))">🇲🇽 Rocko (Spanish (Mexico))</option><option value="Rocko (Spanish (Spain))">🇪🇸 Rocko (Spanish (Spain))</option><option value="Samantha">🇺🇸 Samantha</option><option value="Sandy (Chinese (China mainland))">🇨🇳 Sandy (Chinese (China mainland))</option><option value="Sandy (Chinese (Taiwan))">🇹🇼 Sandy (Chinese (Taiwan))</option><option value="Sandy (English (United Kingdom))">🇬🇧 Sandy (English (United Kingdom))</option><option value="Sandy (English (United States))">🇺🇸 Sandy (English (United States))</option><option value="Sandy (Finnish (Finland))">🇫🇮 Sandy (Finnish (Finland))</option><option value="Sandy (French (Canada))">🇨🇦 Sandy (French (Canada))</option><option value="Sandy (French (France))">🇫🇷 Sandy (French (France))</option><option value="Sandy (German (Germany))">🇩🇪 Sandy (German (Germany))</option><option value="Sandy (Italian (Italy))">🇮🇹 Sandy (Italian (Italy))</option><option value="Sandy (Japanese (Japan))">🇯🇵 Sandy (Japanese (Japan))</option><option value="Sandy (Korean (South Korea))">🇰🇷 Sandy (Korean (South Korea))</option><option value="Sandy (Portuguese (Brazil))">🇧🇷 Sandy (Portuguese (Brazil))</option><option value="Sandy (Spanish (Mexico))">🇲🇽 Sandy (Spanish (Mexico))</option><option value="Sandy (Spanish (Spain))">🇪🇸 Sandy (Spanish (Spain))</option><option value="Sara">🇩🇰 Sara</option><option value="Satu">🇫🇮 Satu</option><option value="Shelley (Chinese (China mainland))">🇨🇳 Shelley (Chinese (China mainland))</option><option value="Shelley (Chinese (Taiwan))">🇹🇼 Shelley (Chinese (Taiwan))</option><option value="Shelley (English (United Kingdom))">🇬🇧 Shelley (English (United Kingdom))</option><option value="Shelley (English (United States))">🇺🇸 Shelley (English (United States))</option><option value="Shelley (Finnish (Finland))">🇫🇮 Shelley (Finnish (Finland))</option><option value="Shelley (French (Canada))">🇨🇦 Shelley (French (Canada))</option><option value="Shelley (French (France))">🇫🇷 Shelley (French (France))</option><option value="Shelley (German (Germany))">🇩🇪 Shelley (German (Germany))</option><option value="Shelley (Italian (Italy))">🇮🇹 Shelley (Italian (Italy))</option><option value="Shelley (Japanese (Japan))">🇯🇵 Shelley (Japanese (Japan))</option><option value="Shelley (Korean (South Korea))">🇰🇷 Shelley (Korean (South Korea))</option><option value="Shelley (Portuguese (Brazil))">🇧🇷 Shelley (Portuguese (Brazil))</option><option value="Shelley (Spanish (Mexico))">🇲🇽 Shelley (Spanish (Mexico))</option><option value="Shelley (Spanish (Spain))">🇪🇸 Shelley (Spanish (Spain))</option><option value="Sinji">🇭🇰 Sinji</option><option value="Superstar">🇺🇸 Superstar</option><option value="Tessa">🇿🇦 Tessa</option><option value="Thomas">🇫🇷 Thomas</option><option value="Tina">🇸🇮 Tina</option><option value="Tingting">🇨🇳 Tingting</option><option value="Trinoids">🇺🇸 Trinoids</option><option value="Tünde">🇭🇺 Tünde</option><option value="Vani">🇮🇳 Vani</option><option value="Whisper">🇺🇸 Whisper</option><option value="Wobble">🇺🇸 Wobble</option><option value="Xander">🇳🇱 Xander</option><option value="Yelda">🇹🇷 Yelda</option><option value="Yu-shu">🇨🇳 Yu-shu</option><option value="Yuna">🇰🇷 Yuna</option><option value="Zarvox">🇺🇸 Zarvox</option><option value="Zosia">🇵🇱 Zosia</option><option value="Zuzana">🇨🇿 Zuzana</option></select></p><button class="btn btn-sm btn-primary rm-btn-base rm-btn-primary p-l-20 p-r-20">Close</button></dialog></div></div><body class="entry-content" lang="en" data-rm-theme="light">
+    <div class="edit-banner hide-for-print">
+        <strong>CLICK ANY TEXT TO EDIT</strong> | When done, press Cmd+S to save | To print, press Cmd+P (the green bar won't print)
+    </div>
+
+    <div class="resume-container">
+        <div class="header-bar">
+            <span contenteditable="true">alexishkenyon@gmail.com</span> |
+            <span contenteditable="true">805-798-3839</span> |
+            <span contenteditable="true">www.alexiskenyon.org</span> |
+            <span contenteditable="true">Boulder, CO</span>
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="profile-image">
+                    <img src="output.png" alt="Alexis Kenyon">
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Education</h3>
+                    <div class="education-text">
+                        <div class="edu-degree">Master of Radio Journalism</div>
+                        <div class="edu-degree">Master of Photojournalism</div>
+                        <div class="edu-school">University of California, Berkeley | 2013</div>
+                    </div>
+                    <div class="education-text" style="margin-top:12px;">
+                        <div class="edu-degree">B.S., Managerial Economics</div>
+                        <div class="edu-degree">B.A., English (Poetry emphasis)</div>
+                        <div class="edu-school">University of California, Davis | 2009</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Expertise</h3>
+                    <ul class="expertise-list">
+                        <li>Audio & Video Production</li>
+                        <li>Video Editing</li>
+                        <li>Podcast Hosting & Production</li>
+                        <li>Investigative Journalism</li>
+                        <li>SEO & Audience Growth</li>
+                        <li>Photojournalism & Editing</li>
+                        <li>Sound Engineering</li>
+                        <li>Copy Editing & Script Writing</li>
+                        <li>Live Broadcasting</li>
+                        <li>Social Media Strategy</li>
+                        <li>Team Management</li>
+                        <li>Mentorship & Training</li>
+                        <li>Program Development</li>
+                        <li>Civic Technology</li>
+                        <li>Media Law & Libel</li>
+                        <li>Public Records Requests</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Awards & Accomplishments</h3>
+                    <div class="award-item">First Place, Public Media Journalists Association (2024) - Government & Democracy Feature</div>
+                    <div class="award-item">Second Place, Public Media Journalists Association (2024) - Special Feature, Economic Impacts</div>
+                    <div class="award-item">First Place, Top of the Rockies (2023) - Regional Long-Form Story Editing</div>
+                    <div class="award-item">Mark of Excellence, Colorado Broadcasters Association (2023)</div>
+                    <div class="award-item">Society of Professional Journalists, Top of the Rockies Mark of Excellence, 2022</div>
+                    <div class="award-item">Colorado Broadcasters Association, Top Regional Long Form Story Editing, 2022</div>
+                    <div class="award-item">Solutions Journalism Network, Story Selection, 2021</div>
+                    <div class="award-item">National Geographic Photo Selection, 2013</div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="name-section">
+                    <div class="name-accent"></div>
+                    <div class="name-text">
+                        <h1 class="name">ALEXIS<br>KENYON</h1>
+                        <div class="tagline">Journalist | Creative Storyteller | Editor | Teacher</div>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h3>About</h3>
+                    <p class="about-text" contenteditable="true">
+                        Award-winning multimedia journalist with 20 years of experience in investigative reporting, podcast production, and audio storytelling. Expert in audio editing, digital content creation, and live broadcast production under tight deadlines. Proven track record in audience development, social media strategy, and mentoring emerging journalists in audio production and field reporting.
+                    </p>
+                </div>
+
+                <div class="experience-section">
+                    <h3>Experience</h3>
+
+                    <div class="experience-item">
+                        <div class="exp-date" contenteditable="true">2025 - Present</div>
+                        <div class="exp-content">
+                            <div class="exp-title" contenteditable="true">Visual Artist &amp; App Developer</div>
+                            <div class="exp-company" contenteditable="true">FireICE.info - Civic Action Web Application</div>
+                            <ul class="exp-bullets">
+                                <li contenteditable="true">Designed and built FireICE.info, a free browser-based civic action hub enabling users to contact elected officials, identify local ICE contractors, sign petitions, and connect with legal aid organizations</li>
+                                <li contenteditable="true">Developed pre-written advocacy email scripts and compiled legislative contact databases to reduce barriers to civic participation</li>
+                                <li contenteditable="true">Built accessible, no-login platform using JavaScript and HTML/CSS; all user data stays in-browser to protect privacy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="exp-date" contenteditable="true">2020 - 2025</div>
+                        <div class="exp-content">
+                            <div class="exp-title" contenteditable="true">Senior Multimedia Journalist &amp; Program Coordinator</div>
+                            <div class="exp-company" contenteditable="true">KGNU Community Radio - Boulder, CO</div>
+                            <ul class="exp-bullets">
+                                <li contenteditable="true">Produced investigative audio content on police accountability, housing policy, immigration, and criminal justice for daily live broadcast</li>
+                                <li contenteditable="true">Conducted source development, FOIA requests, and public records analysis for long-form investigative segments</li>
+                                <li contenteditable="true">Built internship program from scratch, scaling to 60+ competitive applications annually</li>
+                                <li contenteditable="true">Mentored 20+ interns; graduates placed at 9 News, Colorado Public Radio, This American Life, and WAMU</li>
+                                <li contenteditable="true">Led digital content strategy, increasing website traffic 300% and doubling social media engagement</li>
+                                <li contenteditable="true">Produced 2-3 audio packages weekly for live morning news program; managed end-to-end audio production workflow</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="exp-date" contenteditable="true">2015 - Present</div>
+                        <div class="exp-content">
+                            <div class="exp-title" contenteditable="true">Freelance Multimedia Journalist &amp; Podcast Producer</div>
+                            <div class="exp-company" contenteditable="true">ProPublica, Time, and various outlets</div>
+                            <ul class="exp-bullets">
+                                <li contenteditable="true">Produced investigative audio and photo journalism for national publications</li>
+                                <li contenteditable="true">Created and hosted weekly podcast series; managed full production cycle from research to audio editing and distribution</li>
+                                <li contenteditable="true">Produced documentary content and multi-part audio series on music history and tech industry trends</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="exp-date" contenteditable="true">2009 - 2015</div>
+                        <div class="exp-content">
+                            <div class="exp-title" contenteditable="true">Audio Producer / Editor / Reporter</div>
+                            <div class="exp-company" contenteditable="true">NPR, KCRW (Santa Monica, CA), KFSK-FM (Petersburg, AK)</div>
+                            <ul class="exp-bullets">
+                                <li contenteditable="true">Produced and edited broadcast content for three public radio stations</li>
+                                <li contenteditable="true">Pitched stories for national distribution; wrote scripts and performed audio mixing and post-production</li>
+                                <li contenteditable="true">Conducted pre-production research for live interviews; synthesized complex information under deadline pressure</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="exp-date" contenteditable="true">2011 - 2013</div>
+                        <div class="exp-content">
+                            <div class="exp-title" contenteditable="true">Chief Photo Editor / Managing Editor / Graduate Researcher</div>
+                            <div class="exp-company" contenteditable="true">University of California, Berkeley Graduate School of Journalism</div>
+                            <ul class="exp-bullets">
+                                <li contenteditable="true">Served as Chief Photo Editor for prestigious student publication</li>
+                                <li contenteditable="true">Co-led classes on writing for radio, sound production, and field reporting</li>
+                                <li contenteditable="true">Increased radio track enrollment from zero to 35 students</li>
+                                <li contenteditable="true">Managed team of 20 summer print and photo journalists</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-break"></div>
+                <div class="page-2-header">ALEXIS KENYON | Page 2 | alexiskenyon.org</div>
+
+                <div class="skills-section">
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <strong>Audio &amp; Software:</strong> <span contenteditable="true">Descript, Pro Tools, Adobe Audition, Hindenburg, Audacity, Photoshop, Premiere Pro, WordPress, JavaScript, HTML/CSS</span>
+                        </div>
+                        <div class="skill-category">
+                            <strong>Production:</strong> <span contenteditable="true">Podcast Production, Audio Editing, Audio Post-Production, Live Broadcast, Field Recording, Script Writing, Video Editing</span>
+                        </div>
+                        <div class="skill-category">
+                            <strong>Journalism:</strong> <span contenteditable="true">Investigative Reporting, FOIA Requests, Source Development, Interviewing, Fact-Checking, Data Journalism</span>
+                        </div>
+                        <div class="skill-category">
+                            <strong>Digital &amp; Leadership:</strong> <span contenteditable="true">Content Strategy, Social Media Management, Audience Development, SEO, Team Leadership, Training &amp; Mentorship</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Style Toolbar -->
+    <div class="style-toolbar hide-for-print">
+        <!-- Selection indicator -->
+        <div class="toolbar-group">
+            <span class="toolbar-label">Selected:</span>
+            <span id="selectedElement" class="no-selection">Click any element</span>
+        </div>
+
+        <!-- Color Controls -->
+        <div class="toolbar-group">
+            <span class="toolbar-label">Text Color</span>
+            <div class="color-picker-wrapper">
+                <input type="color" id="textColorPicker" class="color-input" value="#333333" title="Pick text color">
+            </div>
+        </div>
+
+        <div class="toolbar-group">
+            <span class="toolbar-label">Background</span>
+            <div class="color-picker-wrapper">
+                <input type="color" id="bgColorPicker" class="color-input" value="#ffffff" title="Pick background color">
+                <button class="toolbar-btn small" id="clearBg" title="Remove background">X</button>
+            </div>
+        </div>
+
+        <!-- Text Size Controls -->
+        <div class="toolbar-group">
+            <span class="toolbar-label">Text Size</span>
+            <div class="size-controls">
+                <button class="toolbar-btn small" id="decreaseSize">-</button>
+                <span class="size-display" id="sizeDisplay">--</span>
+                <button class="toolbar-btn small" id="increaseSize">+</button>
+            </div>
+        </div>
+
+        <!-- Move Controls -->
+        <div class="toolbar-group">
+            <span class="toolbar-label">Move</span>
+            <div class="move-controls">
+                <span></span>
+                <button class="move-btn" id="moveUp" title="Move up">▲</button>
+                <span></span>
+                <button class="move-btn" id="moveLeft" title="Move left">◀</button>
+                <button class="move-btn" id="moveDown" title="Move down">▼</button>
+                <button class="move-btn" id="moveRight" title="Move right">▶</button>
+            </div>
+        </div>
+
+        <!-- Image Position Controls -->
+        <div class="toolbar-group">
+            <span class="toolbar-label">Photo Crop</span>
+            <div class="move-controls">
+                <span></span>
+                <button class="move-btn" id="imgUp" title="Move image up">▲</button>
+                <span></span>
+                <button class="move-btn" id="imgLeft" title="Move image left">◀</button>
+                <button class="move-btn" id="imgDown" title="Move image down">▼</button>
+                <button class="move-btn" id="imgRight" title="Move image right">▶</button>
+            </div>
+        </div>
+
+        <!-- Add Elements -->
+        <div class="toolbar-group">
+            <span class="toolbar-label">Add</span>
+            <button class="toolbar-btn small" id="addBullet" title="Add new bullet point">+ Bullet</button>
+            <button class="toolbar-btn small" id="addSection" title="Add new section">+ Section</button>
+        </div>
+
+        <!-- Delete -->
+        <div class="toolbar-group">
+            <button class="toolbar-btn small" id="deleteElement" title="Delete selected element" style="background:#c0392b;">Delete</button>
+        </div>
+    </div>
+
+    <script>
+        // Currently selected element
+        let selectedElement = null;
+
+        // Get all editable elements
+        function getAllEditables() {
+            return document.querySelectorAll('[contenteditable="true"]');
+        }
+
+        // Update selection indicator
+        function updateSelectionIndicator() {
+            const indicator = document.getElementById('selectedElement');
+            if (selectedElement) {
+                let text = selectedElement.textContent.trim();
+                if (text.length > 30) text = text.substring(0, 30) + '...';
+                indicator.textContent = text || '[empty]';
+                indicator.className = 'selected-indicator';
+            } else {
+                indicator.textContent = 'Click any element';
+                indicator.className = 'no-selection';
+            }
+        }
+
+        // Update size display
+        function updateSizeDisplay() {
+            const display = document.getElementById('sizeDisplay');
+            if (selectedElement) {
+                const computed = window.getComputedStyle(selectedElement);
+                display.textContent = computed.fontSize;
+            } else {
+                display.textContent = '--';
+            }
+        }
+
+        // Track selected element
+        document.addEventListener('click', function(e) {
+            // Ignore clicks on toolbar
+            if (e.target.closest('.style-toolbar')) return;
+
+            // Find editable element
+            const editable = e.target.closest('[contenteditable="true"]');
+
+            // Clear previous selection styling
+            if (selectedElement) {
+                selectedElement.style.outline = '';
+            }
+
+            if (editable) {
+                selectedElement = editable;
+                selectedElement.style.outline = '2px solid #E91E63';
+
+                // Update color pickers to match selected element
+                const computed = window.getComputedStyle(selectedElement);
+                document.getElementById('textColorPicker').value = rgbToHex(computed.color);
+                const bgColor = computed.backgroundColor;
+                if (bgColor && bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent') {
+                    document.getElementById('bgColorPicker').value = rgbToHex(bgColor);
+                }
+            } else {
+                selectedElement = null;
+            }
+
+            updateSelectionIndicator();
+            updateSizeDisplay();
+        });
+
+        // Convert RGB to Hex
+        function rgbToHex(rgb) {
+            if (rgb.startsWith('#')) return rgb;
+            const match = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+            if (!match) return '#000000';
+            const r = parseInt(match[1]).toString(16).padStart(2, '0');
+            const g = parseInt(match[2]).toString(16).padStart(2, '0');
+            const b = parseInt(match[3]).toString(16).padStart(2, '0');
+            return '#' + r + g + b;
+        }
+
+        // Text color picker
+        document.getElementById('textColorPicker').addEventListener('input', function(e) {
+            if (selectedElement) {
+                selectedElement.style.color = e.target.value;
+            }
+        });
+
+        // Background color picker
+        document.getElementById('bgColorPicker').addEventListener('input', function(e) {
+            if (selectedElement) {
+                selectedElement.style.backgroundColor = e.target.value;
+            }
+        });
+
+        // Clear background
+        document.getElementById('clearBg').addEventListener('click', function() {
+            if (selectedElement) {
+                selectedElement.style.backgroundColor = '';
+            }
+        });
+
+        // Increase font size
+        document.getElementById('increaseSize').addEventListener('click', function() {
+            if (selectedElement) {
+                const computed = window.getComputedStyle(selectedElement);
+                const currentSize = parseFloat(computed.fontSize);
+                selectedElement.style.fontSize = (currentSize + 1) + 'px';
+                updateSizeDisplay();
+            }
+        });
+
+        // Decrease font size
+        document.getElementById('decreaseSize').addEventListener('click', function() {
+            if (selectedElement) {
+                const computed = window.getComputedStyle(selectedElement);
+                const currentSize = parseFloat(computed.fontSize);
+                if (currentSize > 6) {
+                    selectedElement.style.fontSize = (currentSize - 1) + 'px';
+                    updateSizeDisplay();
+                }
+            }
+        });
+
+        // Move functions (adjust margins)
+        document.getElementById('moveUp').addEventListener('click', function() {
+            if (selectedElement) {
+                const current = parseInt(window.getComputedStyle(selectedElement).marginTop) || 0;
+                selectedElement.style.marginTop = (current - 2) + 'px';
+            }
+        });
+
+        document.getElementById('moveDown').addEventListener('click', function() {
+            if (selectedElement) {
+                const current = parseInt(window.getComputedStyle(selectedElement).marginTop) || 0;
+                selectedElement.style.marginTop = (current + 2) + 'px';
+            }
+        });
+
+        document.getElementById('moveLeft').addEventListener('click', function() {
+            if (selectedElement) {
+                const current = parseInt(window.getComputedStyle(selectedElement).marginLeft) || 0;
+                selectedElement.style.marginLeft = (current - 2) + 'px';
+            }
+        });
+
+        document.getElementById('moveRight').addEventListener('click', function() {
+            if (selectedElement) {
+                const current = parseInt(window.getComputedStyle(selectedElement).marginLeft) || 0;
+                selectedElement.style.marginLeft = (current + 2) + 'px';
+            }
+        });
+
+        // Image position controls
+        let imgPosX = 50;
+        let imgPosY = 45;
+        const profileImg = document.querySelector('.profile-image img');
+
+        document.getElementById('imgUp').addEventListener('click', function() {
+            imgPosY = Math.max(0, imgPosY - 5);
+            profileImg.style.objectPosition = imgPosX + '% ' + imgPosY + '%';
+        });
+
+        document.getElementById('imgDown').addEventListener('click', function() {
+            imgPosY = Math.min(100, imgPosY + 5);
+            profileImg.style.objectPosition = imgPosX + '% ' + imgPosY + '%';
+        });
+
+        document.getElementById('imgLeft').addEventListener('click', function() {
+            imgPosX = Math.max(0, imgPosX - 5);
+            profileImg.style.objectPosition = imgPosX + '% ' + imgPosY + '%';
+        });
+
+        document.getElementById('imgRight').addEventListener('click', function() {
+            imgPosX = Math.min(100, imgPosX + 5);
+            profileImg.style.objectPosition = imgPosX + '% ' + imgPosY + '%';
+        });
+
+        // Add bullet point
+        document.getElementById('addBullet').addEventListener('click', function() {
+            if (selectedElement) {
+                // Find the parent list or create a new bullet near selection
+                const parentList = selectedElement.closest('ul');
+                if (parentList) {
+                    const newLi = document.createElement('li');
+                    newLi.setAttribute('contenteditable', 'true');
+                    newLi.textContent = 'New bullet point - click to edit';
+
+                    // Insert after current element's li, or at end of list
+                    const currentLi = selectedElement.closest('li');
+                    if (currentLi && currentLi.nextSibling) {
+                        parentList.insertBefore(newLi, currentLi.nextSibling);
+                    } else {
+                        parentList.appendChild(newLi);
+                    }
+
+                    // Select the new bullet
+                    selectedElement.style.outline = '';
+                    selectedElement = newLi;
+                    selectedElement.style.outline = '2px solid #E91E63';
+                    selectedElement.focus();
+                    updateSelectionIndicator();
+                } else {
+                    alert('Select a bullet point first, then click "+ Bullet" to add another one below it.');
+                }
+            } else {
+                alert('First click on an existing bullet point, then click "+ Bullet" to add a new one below it.');
+            }
+        });
+
+        // Add new section
+        document.getElementById('addSection').addEventListener('click', function() {
+            const experienceSection = document.querySelector('.experience-section');
+            if (experienceSection) {
+                const newSection = document.createElement('div');
+                newSection.className = 'experience-item';
+                newSection.innerHTML = `
+                    <div class="exp-date" contenteditable="true">YEAR</div>
+                    <div class="exp-content">
+                        <div class="exp-title" contenteditable="true">NEW TITLE</div>
+                        <div class="exp-company" contenteditable="true">Company Name - Location</div>
+                        <ul class="exp-bullets">
+                            <li contenteditable="true">Description of your role and achievements</li>
+                        </ul>
+                    </div>
+                `;
+                experienceSection.appendChild(newSection);
+
+                // Select the new title
+                const newTitle = newSection.querySelector('.exp-title');
+                if (selectedElement) selectedElement.style.outline = '';
+                selectedElement = newTitle;
+                selectedElement.style.outline = '2px solid #E91E63';
+                selectedElement.focus();
+                updateSelectionIndicator();
+            }
+        });
+
+        // Delete element
+        document.getElementById('deleteElement').addEventListener('click', function() {
+            if (selectedElement) {
+                const tagName = selectedElement.tagName.toLowerCase();
+
+                // Safety check - don't delete major structural elements
+                if (['body', 'html', 'head'].includes(tagName)) {
+                    alert("Can't delete this element!");
+                    return;
+                }
+
+                // Confirm deletion
+                const text = selectedElement.textContent.trim().substring(0, 30);
+                if (confirm('Delete "' + text + '"?')) {
+                    selectedElement.remove();
+                    selectedElement = null;
+                    updateSelectionIndicator();
+                    updateSizeDisplay();
+                }
+            } else {
+                alert('Select an element first by clicking on it.');
+            }
+        });
+
+        // Initialize
+        updateSelectionIndicator();
+        updateSizeDisplay();
+    </script>
+
+
+<div id="speechify-global-notifications"><template shadowrootmode="open"><div id="speechify-global-notifications-root" style="position: fixed; top: 0px; left: 0px; height: 100vh; z-index: 2147483644; width: 0vw;"></div></template></div><div id="speechify-scroll-to-highlight" style="position: absolute; bottom: 0px; right: 0px;"><template shadowrootmode="open"><div id="speechify-scroll-to-highlight-root" style="position: fixed; z-index: 2147483646; top: 0px; left: 50%; transform: translateX(-50%); height: fit-content; font-size: initial;"></div></template></div><div id="speechify-hover-player-shadow-root"><template shadowrootmode="open"><div id="speechify-hover-player-container"><style data-emotion="hover-player-emotion-cache" data-s="">.hover-player-emotion-cache-llwddc{position:absolute;height:3px;background:linear-gradient(90deg, #4759f7 52.5%, rgba(107, 120, 252, 0) 93.6%);border-radius:4px 0 0 4px;opacity:1;top:0;left:0;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation:animation-morap3 100ms ease-out;animation:animation-morap3 100ms ease-out;width:100%;}</style><style data-emotion="hover-player-emotion-cache" data-s="">@-webkit-keyframes animation-morap3{from{width:0;}to{width:100%;}}</style><style data-emotion="hover-player-emotion-cache" data-s="">@keyframes animation-morap3{from{width:0;}to{width:100%;}}</style><style data-emotion="hover-player-emotion-cache" data-s="">.hover-player-emotion-cache-189n28h{position:absolute;cursor:pointer;background:transparent;border:none;outline:none;margin:0;padding:0;pointer-events:all;}</style><style data-emotion="hover-player-emotion-cache" data-s="">@-webkit-keyframes fadeOut{from{opacity:1;}to{opacity:0;}}</style><style data-emotion="hover-player-emotion-cache" data-s="">@keyframes fadeOut{from{opacity:1;}to{opacity:0;}}</style><style data-emotion="hover-player-emotion-cache" data-s="">@-webkit-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}</style><style data-emotion="hover-player-emotion-cache" data-s="">@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}</style><style data-emotion="hover-player-emotion-cache" data-s="">@-webkit-keyframes loading{from{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}</style><style data-emotion="hover-player-emotion-cache" data-s="">@keyframes loading{from{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}</style><style data-emotion="hover-player-emotion-cache" data-s="">.hover-player-emotion-cache-189n28h .fadeOut{-webkit-animation-name:fadeOut;animation-name:fadeOut;-webkit-animation-duration:200ms;animation-duration:200ms;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;}</style><style data-emotion="hover-player-emotion-cache" data-s="">.hover-player-emotion-cache-189n28h .fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;-webkit-animation-duration:100ms;animation-duration:100ms;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;}</style><style data-emotion="hover-player-emotion-cache" data-s="">.hover-player-emotion-cache-189n28h .icon{cursor:pointer;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-radius:50%;position:absolute;color:#ffffff;background:#4759f7;}</style><style data-emotion="hover-player-emotion-cache" data-s="">.hover-player-emotion-cache-189n28h .icon:hover{background:#4454e3;}</style><style data-emotion="hover-player-emotion-cache" data-s="">.hover-player-emotion-cache-189n28h .icon >.play-pause-icon-svg{cursor:pointer;width:100%;height:100%;}</style><style data-emotion="hover-player-emotion-cache" data-s="">.hover-player-emotion-cache-189n28h .icon .circularProgress{position:absolute;width:calc(100% + 2px + 1.75px);height:calc(100% + 2px + 1.75px);top:calc(-1px - 0.875px);left:calc(-1px - 0.875px);-webkit-animation-name:loading;animation-name:loading;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:linear;animation-timing-function:linear;}</style></div></template></div><div id="speechify-settings-modal" style="position: absolute; bottom: 0px; right: 0px;"><template shadowrootmode="open"><div id="speechify-settings-modal-root" style="position: fixed; z-index: 2147483646; top: 0px; left: 0px; height: fit-content; font-size: initial;"></div></template></div><div id="speechify-screenshot-mode" style="position: fixed; top: 0px; right: 0px; width: 100%; min-height: 100%; z-index: 2147483640; display: none !important;"><template shadowrootmode="open"><div id="speechify-screenshot-mode-root" style="width: 100%; height: 100%; position: relative;"></div></template></div><div id="speechify-mic-button" style="z-index: 2147483644; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"><template shadowrootmode="open"><style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  </style><style data-emotion="mic-button-emotion-cache" data-s="">.mic-button-emotion-cache-kx6ymz{position:fixed;top:calc(50vh - 48px);right:18px;z-index:2147483643;}</style><style data-emotion="mic-button-emotion-cache" data-s="">.mic-button-emotion-cache-p810y7{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#1e1e1f;border:none;border-radius:9999px;box-shadow:0px 4px 6px 0px rgba(0, 0, 0, 0.32);color:#ffffff;cursor:pointer;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;width:48px;gap:8px;will-change:height,transform,opacity;-webkit-transition:height 0.2s ease-out;transition:height 0.2s ease-out;opacity:0;-webkit-transform:translateX(100%);-moz-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);-webkit-animation:animation-zn4ri3 0.2s ease-out forwards;animation:animation-zn4ri3 0.2s ease-out forwards;-webkit-animation-delay:0.1s;animation-delay:0.1s;padding-top:0;height:48px;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}</style><style data-emotion="mic-button-emotion-cache" data-s="">@-webkit-keyframes animation-zn4ri3{from{opacity:0;-webkit-transform:translateX(100%);-moz-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);}to{opacity:1;-webkit-transform:translateX(0);-moz-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}</style><style data-emotion="mic-button-emotion-cache" data-s="">@keyframes animation-zn4ri3{from{opacity:0;-webkit-transform:translateX(100%);-moz-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);}to{opacity:1;-webkit-transform:translateX(0);-moz-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}</style><style data-emotion="mic-button-emotion-cache" data-s="">.mic-button-emotion-cache-9a1w0v{position:relative;opacity:1;-webkit-transition:opacity 0.15s ease-in-out;transition:opacity 0.15s ease-in-out;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;bottom:0;z-index:9998;}</style><style data-emotion="mic-button-emotion-cache" data-s="">.mic-button-emotion-cache-2a2xww{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#1e1e1f;color:#ffffff;border:none;border-radius:100%;cursor:pointer;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:48px;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;padding:0;width:48px;}</style><style data-emotion="mic-button-emotion-cache" data-s="">.mic-button-emotion-cache-2a2xww:hover svg g{opacity:0.75;}</style><style data-emotion="mic-button-emotion-cache" data-s="">.mic-button-emotion-cache-14y2wci{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#1e1e1f;border:none;border-radius:9999px;box-shadow:0px 4px 6px 0px rgba(0, 0, 0, 0.32);color:#ffffff;cursor:pointer;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;width:48px;gap:8px;will-change:height,transform,opacity;-webkit-transition:height 0.2s ease-out;transition:height 0.2s ease-out;-webkit-animation:animation-1snyvzp 0.2s ease-out forwards;animation:animation-1snyvzp 0.2s ease-out forwards;padding-top:0;height:48px;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}</style><style data-emotion="mic-button-emotion-cache" data-s="">@-webkit-keyframes animation-1snyvzp{from{opacity:1;-webkit-transform:translateX(0);-moz-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}to{opacity:0;-webkit-transform:translateX(100%);-moz-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);}}</style><style data-emotion="mic-button-emotion-cache" data-s="">@keyframes animation-1snyvzp{from{opacity:1;-webkit-transform:translateX(0);-moz-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}to{opacity:0;-webkit-transform:translateX(100%);-moz-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);}}</style></template></div><div id="rm-toolbar" class="rm-toolbar rm-toolbar-dark rm-toolbar-expand rm-fixed-top no-print" style="display: none;">
+	<div class="rm-toolbar-nav rm-mr-auto no-print">
+		<div class="rm-toolbar-nav-logo rm-cursor-pointer" data-rm-img="icon" data-rm-img-ext="png" data-rm-action="redirect-to-home"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/png/icon.png"></div>
+
+      	<div class="rm-btn-group" role="group" style="display:none">
+			<div class="rm-btn rm-btn-sm btn-secondary" data-rm-action="tts-start">
+				<i class="fas fa-play"></i>
+			</div>
+			<div class="rm-btn rm-btn-sm btn-secondary" data-rm-action="tts-stop">
+				<i class="fas fa-stop"></i>
+			</div>
+		</div>
+    </div>
+
+	<div class="rm-ul rm-toolbar-nav rm-ml-auto">
+		<div class="rm-li tlite-tooltip" title="Listen">
+			<button type="button" class="rm-btn-nav rm-img-22 rm-m-t--1i" data-rm-img="headphones" data-rm-img-ext="svg" data-rm-action="tts-toggle-start"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/headphones.svg"></button>		
+		</div>		
+		<div class="rm-li tlite-tooltip" title="Edit">
+		  <button type="button" class="rm-btn-nav rm-img-20" data-rm-img="edit-text-file-2" data-rm-img-ext="svg" data-rm-action="editing-mode-start"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/edit-text-file-2.svg"></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Delete items">
+		  <button type="button" class="rm-btn-nav rm-img-21" data-rm-img="erase" data-rm-img-ext="svg" data-rm-action="deletion-mode-start"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/erase.svg"></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Translate" id="rm-translate-toggle" data-toggle="true" data-target="#rm-translate">
+		  <button type="button" class="rm-btn-nav" data-rm-img="translation" data-rm-img-ext="svg"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/translation.svg"></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Print">
+		  <button type="button" class="rm-btn-nav" data-rm-img="print" data-rm-img-ext="svg" data-rm-action="print"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/print.svg"></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Scroll">
+		  <button type="button" class="rm-btn-nav rm-img" data-rm-img="scroll-down" data-rm-img-ext="svg" data-rm-action="autoscroll"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/scroll-down.svg"></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Settings" id="rm-main-settings-toggle" data-toggle="true" data-target="#rm-main-settings">
+		    <button type="button" class="rm-btn-nav" data-rm-img="tune" data-rm-img-ext="svg"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/tune.svg"></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Save Bookmark">
+		  <button type="button" class="rm-btn-nav" data-rm-img="bookmark-2" data-rm-img-ext="svg" data-rm-job="toggle-iframe" data-rm-params="{&quot;iframe_name&quot;:&quot;bookmark&quot;}"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/bookmark-2.svg"></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Fullscreen">
+		  <button type="button" class="rm-btn-nav" data-rm-action="fullscreen-toggle" data-rm-img="expand" data-rm-img-ext="svg"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/expand.svg"></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Close [ESC]">
+		  <button type="button" class="rm-btn-nav" data-rm-img="close" data-rm-img-ext="svg" data-rm-job="hide-iframe" data-rm-params="{&quot;iframe_name&quot;:&quot;reader&quot;}"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/close.svg"></button>
+		</div>
+	</div>
+
+	<div id="rm-toolbar-toggle" class="rm-cursor-pointer">
+		<i class="fas fa-chevron-up"></i>
+	</div>	
+</div>
+
+<div id="rm-toolbar-tts" class="rm-toolbar rm-toolbar-dark rm-toolbar-expand rm-fixed-top no-print" style="display:none">
+	<div class="rm-toolbar-nav rm-mr-auto no-print">
+		<div class="rm-tts-wave" style="display:">
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		</div>
+
+		<div class="rm-tts-wave-active" style="display:none">
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		    <span class="rm-tts-wave-stroke"></span>
+		</div>
+	</div>
+		
+	<div class="rm-ul rm-toolbar-nav rm-toolbar-nav-center rm-ml-auto">
+		<div class="rm-li tlite-tooltip" title="Previous">
+			<button type="button" class="rm-btn-nav rm-img-20" data-rm-img="skip-to-start" data-rm-img-ext="svg" data-rm-action="tts-previous"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/skip-to-start.svg"></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Play/Pause">
+			<button type="button" class="rm-btn-nav rm-img-20" data-rm-img="play" data-rm-img-ext="svg" data-rm-action="tts-start"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/play.svg"></button>
+			<button type="button" class="rm-btn-nav rm-img-20" data-rm-img="pause" data-rm-img-ext="svg" data-rm-action="tts-stop" style="display:none"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/pause.svg"></button>
+		</div>	
+		<div class="rm-li tlite-tooltip" title="Forward">
+			<button type="button" class="rm-btn-nav rm-img-20" data-rm-img="end" data-rm-img-ext="svg" data-rm-action="tts-forward"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/end.svg"></button>
+		</div>	
+	</div>	
+
+	<div class="rm-ul rm-toolbar-nav rm-ml-auto">
+		<div class="rm-li">
+			<button type="button" class="rm-btn-nav rm-img-20" data-rm-img="audio" data-rm-img-ext="svg" data-rm-img-classes="rm-float-left rm-m-t-2 rm-m-r-2" data-rm-action="tts-settings"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/audio.svg" class="rm-float-left rm-m-t-2 rm-m-r-2"><span class="rm-m-l-5 rm-btn-nav-text rm-display-inline-block rm-float-left">Voice options</span></button>
+		</div>
+		<div class="rm-li tlite-tooltip" title="Close TTS">
+		  <button type="button" class="rm-btn-nav" data-rm-img="close" data-rm-img-ext="svg" data-rm-action="tts-toggle-stop"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/close.svg"></button>
+		</div>
+	</div>	
+</div>	
+
+<div id="rm-main-settings" class="rm-toolbar-aside" data-toggle-target="true" data-parent="#rm-main-settings-toggle" style="display:none">
+	<div class="rm-accordion">
+	  	<div class="rm-card">
+		    <div class="rm-card-header rm-hover-brightness" data-target="#rm-text-settings">
+		    	<span class="rm-m-l--3 rm-m-r-3"><b>Aa</b></span> TYPOGRAPHY
+		    </div>
+		    <div id="rm-text-settings" class="rm-card-body show" data-parent="#rm-main-settings">
+				<label class="rm-label">Font</label>
+				<select class="custom-select rm-custom-select rm-border-0i" name="font_family" data-css="true" data-css-elem="*">
+					<option value="arial">Arial</option>
+					<option value="arial black">Arial Black</option>
+					<option value="athelas">Athelas</option>
+					<option value="comic sans ms">Comic Sans MS</option>
+					<option value="courier new">Courier New</option>
+					<option value="courier">Courier</option>
+					<option value="didot">Didot</option>
+					<option value="georgia">Georgia</option>
+					<option value="gill sans">Gill Sans</option>
+					<option value="helvetica" selected="">Helvetica</option>
+					<option value="impact">Impact</option>
+					<option value="iowan old style">Iowan Old Style</option>
+					<option value="palatino">Palatino</option>
+					<option value="optima">Optima</option>
+					<option value="sans-serif">Sans-serif</option>
+					<option value="sassoon-primary">Sassoon Primary</option>
+					<option value="seravek">Seravek</option>
+					<option value="serif">Serif</option>
+					<option value="times new roman">Times New Roman</option>
+					<option value="trebuchet ms">Trebuchet MS</option>
+					<option value="opendyslexic">OpenDyslexic</option>
+					<option value="opendyslexic-mono">OpenDyslexic Mono</option>
+					<option value="opendyslexic-bold">OpenDyslexic Bold</option>
+					<option value="opendyslexic-italic">OpenDyslexic Italic</option>
+					<option value="opendyslexic-bold-italic">OpenDyslexic BoldItalic</option>
+					<option value="lexend-deca">LexendDeca</option>
+					<option value="lexend-exa">Lexend Exa</option>
+					<option value="lexend-giga">Lexend Giga</option>
+					<option value="lexend-mega">Lexend Mega</option>
+					<option value="lexend-peta">Lexend Peta</option>
+					<option value="lexend-tera">Lexend Tera</option>
+					<option value="lexend-zetta">Lexend Zetta</option>
+					<option value="lexie-readable">LexieReadable</option>
+					<option value="lexie-readable-bold">LexieReadable Bold</option>
+					<option value="lora">Lora</option>
+					<option value="lora-bold">Lora Bold</option>
+					<option value="lora-italic">Lora Italic</option>
+					<option value="lora-bold-italic">Lora BoldItalic</option>
+					<option value="verdana">Verdana</option>
+				</select>
+
+				<label class="rm-label rm-m-t-22 rm-m-b-12">Text Align</label>
+				<table id="rm-text-align" class="rm-full-width">
+					<tbody><tr>
+						<td class="rm-width-15 active">
+							<i class="fas fa-align-left"></i> <br>
+							<input type="radio" name="text_align" data-css="true" data-css-elem="*" value="left" checked="checked" style="display:none">
+						</td>
+						<td class="rm-width-15">
+							<i class="fas fa-align-center"></i> <br>
+							<input type="radio" name="text_align" data-css="true" data-css-elem="*" value="center" style="display:none">
+						</td>	
+						<td class="rm-width-15">
+							<i class="fas fa-align-right"></i> <br>
+							<input type="radio" name="text_align" data-css="true" data-css-elem="*" value="right" style="display:none">
+						</td>	
+						<td>
+							<i class="fas fa-align-justify"></i> <br>
+							<input type="radio" name="text_align" data-css="true" data-css-elem="*" value="justify" style="display:none">
+						</td>	
+					</tr>		
+				</tbody></table>	
+
+				<label class="rm-label rm-m-t-22 rm-m-b-12">Text Size</label>
+				<div class="rm-range-control">
+				    <input type="range" name="font_size" data-css="true" data-css-elem="*" data-css-postfix="px" min="12" max="100" step="1" value="19" data-thumbwidth="19">
+				    <output name="rangeVal">19</output>
+			  	</div>
+
+			  	<label class="rm-label rm-m-t-22 rm-m-b-12">Line Height</label>
+				<div class="rm-range-control">
+				    <input type="range" name="line_height" data-css="true" data-css-elem="*" data-css-postfix="px" min="10" max="100" step="1" value="30" data-thumbwidth="30">
+				    <output name="rangeVal">30</output>
+			  	</div>
+
+			  	<label class="rm-label rm-m-t-25 rm-m-b-12">Letter Spacing</label>
+				<div class="rm-range-control">
+				    <input type="range" name="letter_spacing" data-css="true" data-css-elem="*" data-css-postfix="px" min="0" max="10" step="0.1" value="0.2" data-thumbwidth="0.2">
+				    <output name="rangeVal">0.2</output>
+			  	</div>
+
+			  	<label class="rm-label rm-m-t-25 rm-m-b-12">Width</label>
+				<div class="rm-range-control">
+				    <input type="range" name="width" data-elem="#rm-article" data-css="true" data-css-postfix="px" min="100" max="1280" step="10" value="680" data-thumbwidth="100">
+			  	</div>	
+
+			  	<div class="rm-m-t-25 rm-m-b-10">
+		        	<button class="rm-btn rm-btn-primary rm-btn-save rm-btn-xs" data-rm-action="save" data-rm-loading="Saving" data-rm-alert="Saved!">Save</button>
+		    	</div>
+		    </div>
+	  	</div>
+	  	<div class="rm-card">
+		    <div class="rm-card-header rm-hover-brightness" data-target="#rm-themes-settings">
+		        <i class="fas fa-swatchbook rm-m-r-5"></i> THEMES
+		    </div>
+			<div id="rm-themes-settings" class="rm-card-body rm-p-b-7i" data-parent="#rm-main-settings">
+			  	<label class="rm-label rm-m-t-10">Current Theme <button class="rm-btn rm-btn-light btn-delete rm-btn-xxs rm-m-t--1 rm-m-l-3" style="display:none;">Delete</button></label>
+			  	<!--<input type="text" name="themes" class="form-control"/>-->
+			  	<div class="rm-ul rm-list-unstyled rm-list-inline rm-m-b-15">
+			  		<div name="theme" data-value="custom" class="rm-li rm-list-inline-item tooltip-s" title="Add custom theme" data-toggle="true" data-target="#rm-new-theme"></div>
+			  	</div>
+
+			  	<div id="test">
+			  	</div>	
+
+			  	
+
+			  	<p>
+		        	<small>
+		        		To change the extension and app theme, go to the
+		        		<a href="https://rawcdn.githack.com/alexishkenyon-cpu/ice-advocacy-tool/0f45425/alexis-kenyon-resume-editable.html#/" data-rm-action="open-page" data-page-name="options" class="rm-color-primary-i">
+		        			<b>Settings page <i class="fas fa-external-link-square-alt"></i></b>
+		        		</a> 
+		        	</small>
+		        </p> 						
+			</div>
+	  	</div>
+	 	<div class="rm-card">
+		    <div class="rm-card-header rm-hover-brightness" data-target="#rm-display-settings">
+		        <i class="fas fa-toggle-on rm-m-r-5"></i> DISPLAY
+		    </div>
+			<div id="rm-display-settings" class="rm-card-body" data-parent="#rm-main-settings">
+				<label class="rm-label rm-label-isolate">
+					<input type="checkbox" class="rm-m-r-3" name="rm_article_outline" data-toggle="true" data-elem-prefix="#"> 
+					<span>Outline</span>
+				</label>
+				<label class="rm-label rm-label-isolate">
+					<input type="checkbox" class="rm-m-r-3" name="img" data-toggle="true" checked=""> 
+					<span>Images</span>
+				</label>
+				<label class="rm-label rm-label-isolate">
+					<input type="checkbox" class="rm-m-r-3" name="rm_article_meta" data-toggle="true" data-elem-prefix="#" checked=""> 
+					<span>Meta</span> 
+				</label>
+				<label class="rm-label rm-label-isolate">
+					<input type="checkbox" class="rm-m-r-3" name="rm_article_author" data-toggle="true" data-elem-prefix="#" checked=""> 
+					<span>Author</span> 
+				</label>
+				<label class="rm-label rm-label-isolate">
+					<input type="checkbox" class="rm-m-r-3" name="rm_article_reading_time" data-toggle="true" data-elem-prefix="#" checked=""> 
+					<span>Reading Time</span> 
+				</label>
+				<label class="rm-label rm-label-isolate">
+					<input type="checkbox" class="rm-m-r-3" name="rm_article_source" data-toggle="true" data-elem-prefix="#" checked=""> 
+					<span>Source URL</span> 
+				</label>
+
+				<div class="rm-m-t-10 rm-m-b-10 rm-m-l-6">
+		        	<div class="rm-btn rm-btn-primary rm-btn-save rm-btn-xs" data-rm-action="save" data-rm-loading="Saving" data-rm-alert="Saved!">Save</div>
+		    	</div>
+			</div>
+	  	</div>
+		<div class="rm-card">
+		    <div class="rm-card-header rm-hover-brightness" data-target="#rm-dyslexia-ruler-settings">
+		    	<i class="fas fa-ruler-horizontal rm-m-r-5"></i> READING RULER
+		    </div>
+		    <div id="rm-dyslexia-ruler-settings" class="rm-card-body" data-parent="#rm-main-settings">
+		        <label class="rm-label rm-label-isolate">
+	      			<input type="checkbox" class="rm-m-r-3" name="rm_reading_ruler" data-toggle="true" data-elem-prefix="#"> 
+	      			<span>Display Ruler</span>
+	      		</label>
+
+	      		<table class="rm-m-t-10">
+			  		<tbody><tr>
+			  			<td class="rm-p-r-10">Color</td>
+			  			<td>
+			  				<input type="color" name="reading_ruler_bg_color" data-css="true" data-css-attr="background-color" data-elem="#rm-reading-ruler" value="#ADADAD">
+			  			</td>
+			  		</tr>	
+			  	</tbody></table>
+
+			  	<label class="rm-label rm-m-t-20">Opacity</label>
+				<div class="rm-range-control rm-m-b-10">
+				    <input type="range" name="reading_ruler_opacity" data-elem="#rm-reading-ruler" data-css="true" data-css-attr="opacity" min="0.1" max="1" step="0.1" value="0.5" data-thumbwidth="0.5">
+				    <output name="rangeVal">0.5</output>
+			  	</div>
+
+				<label class="rm-label rm-m-t-15">Height</label>
+				<div class="rm-range-control">
+				    <input type="range" name="reading_ruler_height" data-elem="#rm-reading-ruler" data-css="true" data-css-attr="height" data-css-postfix="px" min="10" max="250" step="2" value="40" data-thumbwidth="40">
+				    <output name="rangeVal">40</output>
+			  	</div>
+
+			  	<label class="rm-label rm-m-t-20">Position</label>
+				<div class="rm-range-control rm-m-b-10">
+				    <input type="range" name="reading_ruler_top" data-elem="#rm-reading-ruler" data-css="true" data-css-attr="top" data-css-postfix="%" min="10" max="90" step="5" value="45" data-thumbwidth="45">
+				    <output name="rangeVal">45</output>
+			  	</div>
+
+			  	<div class="rm-m-t-25 rm-m-b-10">
+		        	<div class="rm-btn rm-btn-primary rm-btn-save rm-btn-xs" data-rm-action="save" data-rm-loading="Saving" data-rm-alert="Saved!">Save</div>
+		    	</div>
+		    </div>
+		</div>
+	  	<div class="rm-card">
+		    <div class="rm-card-header rm-hover-brightness" data-target="#rm-auto-run-rules">
+		    	<span class="rm-m-r-5"><i class="fas fa-globe rm-m-r-1"></i></span> AUTO-RUN RULES 
+		    	<span class="rm-pill rm-pill-premium rm-m-l-5" data-rm-action="upgrade"><small>PREMIUM</small></span>
+		    </div>
+		    <div id="rm-auto-run-rules" class="rm-card-body" data-parent="#rm-main-settings">
+		        <textarea name="auto_run_rules" class="rm-form-control rm-textarea rm-m-b-10i" rows="5" spellcheck="false" placeholder="Add regex expressions here (seperated by commas)" readonly=""></textarea>
+
+		        <p>
+		        	<small>
+		        		Automatically activate Reader Mode on specific websites by using regex. 
+		        		<a href="https://readermode.io/features/auto-run" target="_blank" class="rm-color-primary-i">
+		        			<b>Learn more <i class="fas fa-external-link-square-alt"></i></b>
+		        		</a> 
+		        	</small>
+		        </p> 
+
+		        <div class="rm-m-t-10 rm-m-b-10">
+		        	<div class="rm-btn rm-btn-primary rm-btn-save rm-btn-xs" data-rm-action="save" data-rm-loading="Saving">Save</div>
+		    	</div>
+		    </div>
+	  	</div>		
+	  	<div class="rm-card">
+		    <div class="rm-card-header rm-hover-brightness" data-target="#rm-custom-css-settings">
+		    	<span class="rm-m-r-5">{ }</span> CUSTOM CSS 
+		    	<span class="rm-pill rm-pill-premium rm-m-l-5" data-rm-action="upgrade"><small>PREMIUM</small></span>
+		    </div>
+		    <div id="rm-custom-css-settings" class="rm-card-body" data-parent="#rm-main-settings">
+		        <textarea name="custom_css" class="rm-form-control rm-textarea rm-m-b-10i" rows="5" spellcheck="false" placeholder="Add your custom css..." readonly=""></textarea>
+		        <div>
+		        	<input type="checkbox" class="rm-m-r-3" name="use_custom_css" checked="" disabled=""> Use custom css
+		    	</div>
+
+		        <p>
+		        	<small>
+		        		Add your own CSS to customize the article's layout or design
+		        		<a href="https://help.readermode.io/using-reader-mode/custom-css" target="_blank" class="rm-color-primary-i">
+		        			<b>Learn more <i class="fas fa-external-link-square-alt"></i></b>
+		        		</a> 
+		        	</small>
+		        </p> 
+
+		        <div class="rm-m-t-10 rm-m-b-10">
+		        	<div class="rm-btn rm-btn-primary rm-btn-save rm-btn-xs" data-rm-action="save" data-rm-loading="Saving">Save</div>
+		    	</div>
+		    </div>
+	  	</div>
+	</div>
+</div>
+
+<div id="rm-translate" class="rm-toolbar-aside" data-toggle-target="true" data-parent="#rm-translate-toggle" style="display:none">
+	<div class="rm-card">
+	    <div class="rm-card-header">
+	    	<i class="fas fa-language rm-m-r-5"></i> TRANSLATE
+	    </div>
+	    <div class="rm-card-body">
+			<label class="rm-label rm-display-block rm-m-b-10">Default translation language:</label>
+			<select class="custom-select rm-custom-select rm-border-0i" name="default_translation_language">
+				<option value="af">🇿🇦 Afrikaans</option>
+				<option value="sq">🇦🇱 Albanian</option>
+				<option value="ar">🇸🇦 Arabic</option>
+				<option value="az">🇦🇿 Azerbaijani</option>
+				<option value="eu">🏴󠁥󠁳󠁰󠁶󠁿 Basque</option>
+				<option value="bn">🇧🇩 Bengali</option>
+				<option value="be">🇧🇾 Belarusian</option>
+				<option value="bg">🇧🇬 Bulgarian</option>
+				<option value="ca">🏴󠁥󠁳󠁰󠁶󠁿 Catalan</option>
+				<option value="zh-CN">🇨🇳 Chinese Simplified</option>
+				<option value="zh-TW">🇨🇳 Chinese Traditional</option>
+				<option value="hr">🇭🇷 Croatian</option>
+				<option value="cs">🇨🇿 Czech</option>
+				<option value="da">🇩🇰 Danish</option>
+				<option value="nl">🇳🇱 Dutch</option>
+				<option value="en" selected="">🇬🇧 English</option>
+				<option value="eo">🏴󠁥󠁳󠁰󠁶󠁿 Esperanto</option>
+				<option value="et">🇪🇪 Estonian</option>
+				<option value="tl">🇵🇭 Filipino</option>
+				<option value="fi">🇫🇮 Finnish</option>
+				<option value="fr">🇫🇷 French</option>
+				<option value="gl">🇪🇸 Galician</option>
+				<option value="ka">🇬🇪 Georgian</option>
+				<option value="de">🇩🇪 German</option>
+				<option value="el">🇬🇷 Greek</option>
+				<option value="gu">🇮🇳 Gujarati</option>
+				<option value="ht">🇭🇹 Haitian Creole</option>
+				<option value="iw">🇮🇱 Hebrew</option>
+				<option value="hi">🇮🇳 Hindi</option>
+				<option value="hu">🇭🇺 Hungarian</option>
+				<option value="is">🇮🇸 Icelandic</option>
+				<option value="id">🇮🇩 Indonesian</option>
+				<option value="ga">🇮🇪 Irish</option>
+				<option value="it">🇮🇹 Italian</option>
+				<option value="ja">🇯🇵 Japanese</option>
+				<option value="kn">🇮🇳 Kannada</option>
+				<option value="ko">🇰🇷 Korean</option>
+				<option value="la">🏴󠁥󠁳󠁰󠁶󠁿 Latin</option>
+				<option value="lv">🇱🇻 Latvian</option>
+				<option value="lt">🇱🇹 Lithuanian</option>
+				<option value="mk">🇲🇰 Macedonian</option>
+				<option value="ms">🇲🇾 Malay</option>
+				<option value="mt">🇲🇹 Maltese</option>
+				<option value="no">🇳🇴 Norwegian</option>
+				<option value="fa">🇮🇷 Persian</option>
+				<option value="pl">🇵🇱 Polish</option>
+				<option value="pt">🇵🇹 Portuguese</option>
+				<option value="ro">🇷🇴 Romanian</option>
+				<option value="ru">🇷🇺 Russian</option>
+				<option value="sr">🇷🇸 Serbian</option>
+				<option value="sk">🇸🇰 Slovak</option>
+				<option value="sl">🇸🇮 Slovenian</option>
+				<option value="es">🇪🇸 Spanish</option>
+				<option value="sw">🏴󠁥󠁳󠁰󠁶󠁿 Swahili</option>
+				<option value="sv">🇸🇪 Swedish</option>
+				<option value="ta">🇮🇳 Tamil</option>
+				<option value="te">🇮🇳 Telugu</option>
+				<option value="th">🇹🇭 Thai</option>
+				<option value="tr">🇹🇷 Turkish</option>
+				<option value="uk">🇺🇦 Ukrainian</option>
+				<option value="ur">🇵🇰 Urdu</option>
+				<option value="vi">🇻🇳 Vietnamese</option>
+				<option value="cy">🇬🇧 Welsh</option>
+				<option value="yi">🇮🇱 Yiddish</option>
+			</select>	
+
+			<div class="rm-m-t-10 rm-m-b-10">
+				<div class="rm-btn rm-btn-light rm-btn-save rm-btn-xs rm-m-r-5 rm-p-l-10i rm-p-r-10i" data-rm-loading="Setting" data-rm-alert="Set!">Set</div>
+				<div class="rm-btn rm-btn-primary rm-btn-save rm-btn-xs" data-rm-action="translate">Translate</div>
+			</div>
+	    </div>
+	</div>	
+</div>
+
+<div id="rm-deletion-mode" class="rm-toolbar-aside" style="display:none">
+	<div class="rm-card">
+	    <div class="rm-card-body text-center rm-p-0i rm-p-t-5i rm-p-b-5i">
+	   		<center>
+	   			<a href="https://rawcdn.githack.com/alexishkenyon-cpu/ice-advocacy-tool/0f45425/alexis-kenyon-resume-editable.html#/" class="rm-deletion-mode-undo rm-m-r-10" title="Undo" style="display:none">
+	        		<i class="fas fa-undo"></i> 
+	        	</a>
+
+		        <div class="rm-btn rm-btn-xs rm-btn-light rm-p-l-25i rm-p-r-25i rm-m-r-3">Cancel</div>
+		        <div class="rm-btn rm-btn-xs rm-btn-primary rm-p-l-30i rm-p-r-30i">Save</div>
+	    	</center>
+	    </div>
+	</div>	
+</div>
+
+<div id="rm-editing-mode" class="rm-toolbar-aside" style="display:none">
+	<div class="rm-card">
+	    <div class="rm-card-body text-center rm-p-0i rm-p-t-5i rm-p-b-5i">
+	    	<center>
+		        <div class="rm-btn rm-btn-xs rm-btn-light rm-p-l-25i rm-p-r-25i rm-m-r-3">Cancel</div>
+		        <div class="rm-btn rm-btn-xs rm-btn-primary rm-p-l-30i rm-p-r-30i">Save</div>
+	    	</center>
+	    </div>
+	</div>	
+</div>
+
+<div id="rm-reading-ruler" class="no-print" style="display:none">
+</div>
+
+<div id="rm-article-outline" class="rm-toolbar-aside" style="display:none">
+	<div class="rm-card">
+	    <div class="rm-card-header">
+	    	<i class="fas fa-list-ul rm-m-r-5"></i> OUTLINE
+	    	<i class="fas fa-chevron-up rm-card-body-toggle rm-float-right rm-m-t-1"></i>
+	    </div>
+	    <div class="rm-card-body">
+	        <div class="rm-ul rm-list-unstyled rm-m-b-5">
+	        </div>	
+	    </div>
+	</div>	
+</div>
+
+<div id="rm-highlighter-container" class="rm-reset-flex no-print">
+	<div id="rm-highlighter-menu" style="display: none;">
+		<!--
+			<div data-rm-action="clear-all" style="display:">Clear all</div>
+		-->
+	<div id="rm-highlighter-menu-list" style="">
+		<div class="rm-highlighter-menu-li rm-m-t-1" data-menu="highlight" data-menu-details="#rm-highlight-form">
+			<div id="rm-highlight-color-selected" class="rm-highlight-color" data-highlight-color="red" data-rm-action="select-color"></div>
+		</div>
+		<div class="rm-highlighter-menu-li" data-rm-action="view-selection" data-menu="view-selection">		
+			<div data-rm-img="view-selection" data-rm-img-ext="svg"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/view-selection.svg"></div> 
+		</div>
+		<div class="rm-highlighter-menu-li" data-rm-action="tts-toggle-start-hm" data-menu="tts">
+			<div data-rm-img="play-round" data-rm-img-ext="svg"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/play-round.svg"></div> 
+		</div>
+		<div class="rm-highlighter-menu-li" data-rm-action="google-translate" data-menu="google-translate">		
+			<div data-rm-img="google-translate" data-rm-img-ext="svg"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/google-translate.svg"></div> 
+		</div>
+		<div class="rm-highlighter-menu-li" data-rm-action="tweet" data-menu="tweet">
+			<div data-rm-img="twitter" data-rm-img-ext="svg"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/twitter.svg"></div> 
+		</div>	
+		<div class="rm-highlighter-menu-li" data-rm-action="open-page" data-page-name="options" data-menu="settings">
+			<div data-rm-img="settings" data-rm-img-ext="svg"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/settings.svg"></div> 
+		</div>	
+	</div><div id="rm-highlighter-menu-details" style="display:none">
+		<div id="rm-highlight-form" class="rm-highlighter-menu-details" data-position-bottom="-200px" style="display:none">
+			<div class="rm-p-7 rm-p-b-1i">
+				<textarea id="rm-highlight-note" placeholder="Take a note..." autocomplete="off" spellcheck="false"></textarea>
+
+				<div id="rm-highlighter-colors" class="rm-m-t-4 rm-m-l-0">
+					<div class="rm-highlight-color rm-m-l-3i" data-rm-img="pencil" data-rm-img-ext="svg" data-rm-action="toggle-highlight-settings-iframe"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/pencil.svg"></div>
+				</div>
+			</div>
+
+			<div id="rm-highlight-form-footer" class="p-7">
+				<div id="rm-highlight-folder" data-rm-action="toggle-bookmark-iframe">
+					<div class="rm-display-inline-block" data-rm-img="folder" data-rm-img-ext="svg"><img src="chrome-extension://llimhhconnjiflfimocjggfjdlmlhblm/img/svg/folder.svg"></div> 
+					<div class="rm-highlight-folder-name">Everything</div>
+				</div> 
+				<div class="btn-update btn-xs rm-btn rm-btn-light" data-rm-action="update" style="display:none">Update</div>
+			</div>	
+		</div>		
+	</div></div>
+	<div id="rm-highlighter-menu-update">
+	</div>
+
+	
+
+		
+</div></body></html>
