@@ -146,33 +146,36 @@
         }
 
         .education-item {
-            margin-bottom: 10px;
+            margin-bottom: 14px;
         }
 
         .degree {
-            font-weight: 600;
             font-size: 9px;
-            color: #333;
-            margin-left: 2px;
-            line-height: 1.3;
+            color: #444;
+            line-height: 1.4;
         }
 
         .school-name {
             font-size: 8px;
-            color: #888;
-            margin-left: 2px;
+            color: #666;
+            margin-top: 2px;
         }
 
         .school-header {
             display: flex;
-            align-items: center;
-            gap: 6px;
-            margin-bottom: 3px;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 4px;
         }
 
         .school-logo {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .school-info {
+            flex: 1;
         }
 
         .school-title {
@@ -180,7 +183,8 @@
             font-size: 10px;
             font-weight: 700;
             color: #333;
-            line-height: 1.2;
+            line-height: 1.3;
+            margin-bottom: 2px;
         }
 
         .expertise-list {
@@ -568,20 +572,26 @@
                     <div class="education-item">
                         <div class="school-header">
                             <img class="school-logo" src="Seal_of_University_of_California,_Berkeley.svg" alt="UC Berkeley">
-                            <span class="school-title" contenteditable="true">University of California, Berkeley</span>
+                            <div class="school-info">
+                                <div class="school-title">University of California, Berkeley</div>
+                                <div class="degree">M.A. Radio Journalism | M.A. Photojournalism</div>
+                                <div class="school-name">2013</div>
+                            </div>
                         </div>
-                        <div class="degree" contenteditable="true">Master of Radio Journalism</div>
-                        <div class="degree" contenteditable="true">Master of Photojournalism</div>
-                        <div class="school-name" contenteditable="true">2013</div>
                     </div>
                     <div class="education-item">
                         <div class="school-header">
-                            <img class="school-logo" src="Seal_of_University_of_California,_Berkeley.svg" alt="UC Davis">
-                            <span class="school-title" contenteditable="true">University of California, Davis</span>
+                            <svg class="school-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48" fill="#022851" stroke="#FFBF00" stroke-width="4"/>
+                                <text x="50" y="45" text-anchor="middle" fill="#FFBF00" font-size="14" font-weight="bold" font-family="serif">UC</text>
+                                <text x="50" y="62" text-anchor="middle" fill="#FFBF00" font-size="11" font-weight="bold" font-family="serif">DAVIS</text>
+                            </svg>
+                            <div class="school-info">
+                                <div class="school-title">University of California, Davis</div>
+                                <div class="degree">B.S. Managerial Economics | B.A. English</div>
+                                <div class="school-name">2009</div>
+                            </div>
                         </div>
-                        <div class="degree" contenteditable="true">B.S., Managerial Economics</div>
-                        <div class="degree" contenteditable="true">B.A., English (Poetry emphasis)</div>
-                        <div class="school-name" contenteditable="true">2009</div>
                     </div>
                 </div>
 
@@ -711,9 +721,6 @@
                     <div class="experience-item">
                         <div class="exp-date" contenteditable="true">2025 - Present</div>
                         <div class="exp-content">
-                            <div class="exp-logos">
-                                <div style="background:linear-gradient(135deg,#FF6B35,#FF4444);color:#fff;padding:4px 10px;border-radius:4px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.5px;">FireICE</div>
-                            </div>
                             <div class="exp-title" contenteditable="true">Visual Artist &amp; App Developer</div>
                             <div class="exp-company" contenteditable="true">FireICE.info - Civic Action Web Application</div>
                             <ul class="exp-bullets">
