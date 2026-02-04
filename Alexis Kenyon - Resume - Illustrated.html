@@ -3,7 +3,7 @@
 <html lang="en" class="hentry"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexis Kenyon - Resume (Illustrated)</title>
+    <title>Alexis Kenyon - Resume (Version 4)</title>
     <link href="css2" rel="stylesheet">
     <style>
         * {
@@ -97,6 +97,7 @@
             height: 180px;
             border-radius: 50%;
             object-fit: cover;
+            object-position: center 45%;
             border: 3px solid #E91E63;
         }
 
@@ -115,62 +116,118 @@
             border-bottom: 2px solid #E91E63;
         }
 
-        /* Software Items with Logos - Even 5-column grid */
-        .software-grid {
+        /* Compact icon grid */
+        .icon-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 6px 4px;
+            gap: 6px;
         }
 
-        .software-item {
+        .icon-box {
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
+            color: white;
+            font-size: 9px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        .software-item img {
-            width: 26px;
-            height: 26px;
-            object-fit: contain;
-            margin-bottom: 2px;
+        /* Education text style */
+        .education-text {
+            margin-bottom: 8px;
+        }
+
+        .edu-degree {
+            font-size: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .edu-school {
+            font-size: 9px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        /* Name section with accent */
+        .name-section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .name-accent {
+            width: 6px;
+            background: #FFD700;
+            margin-right: 12px;
+            align-self: stretch;
+        }
+
+        .name-text {
+            flex: 1;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: #333;
+            line-height: 1.1;
+            margin-bottom: 5px;
         }
 
         .software-item span {
-            font-size: 6px;
+            font-size: 7px;
             text-align: center;
             color: #555;
-            line-height: 1.1;
-            max-width: 38px;
+            line-height: 1.2;
+            max-width: 50px;
         }
 
         .education-item {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .degree {
-            font-weight: 600;
-            font-size: 10px;
-            color: #333;
+            font-size: 9px;
+            color: #444;
+            line-height: 1.4;
         }
 
         .school-name {
-            font-size: 9px;
+            font-size: 8px;
             color: #666;
+            margin-top: 2px;
         }
 
         .school-header {
             display: flex;
-            align-items: center;
-            gap: 8px;
+            align-items: flex-start;
+            gap: 10px;
             margin-bottom: 4px;
+        }
+
+        .school-logo {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .school-info {
+            flex: 1;
         }
 
         .school-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             color: #333;
+            line-height: 1.3;
+            margin-bottom: 2px;
         }
 
         .expertise-list {
@@ -554,138 +611,76 @@
                 </div>
 
                 <div class="sidebar-section">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <div class="school-header">
-                            <img class="school-logo" src="Seal_of_University_of_California,_Berkeley.svg" alt="UC Berkeley">
-                            <span class="school-title" contenteditable="true">University of California, Berkeley</span>
-                        </div>
-                        <div class="degree" contenteditable="true">Master of Radio Journalism</div>
-                        <div class="degree" contenteditable="true">Master of Photojournalism</div>
-                        <div class="school-name" contenteditable="true">2013</div>
+                    <h3>Proficient In</h3>
+                    <div class="icon-grid">
+                        <div class="icon-box" style="background:#31A8FF;" title="Photoshop">Ps</div>
+                        <div class="icon-box" style="background:#9999FF;" title="Audition">Au</div>
+                        <div class="icon-box" style="background:#7B68EE;" title="Pro Tools">PT</div>
+                        <div class="icon-box" style="background:#2563EB;" title="Descript">De</div>
+                        <div class="icon-box" style="background:#FF6B35;" title="Hindenburg">Hi</div>
+                        <div class="icon-box" style="background:#F0DB4F;color:#323330;" title="JavaScript">JS</div>
+                        <div class="icon-box" style="background:#E44D26;" title="HTML">H5</div>
+                        <div class="icon-box" style="background:#264DE4;" title="CSS">CS</div>
+                        <div class="icon-box" style="background:#21759B;" title="WordPress">WP</div>
                     </div>
-                    <div class="education-item">
-                        <div class="school-header">
-                            <img class="school-logo" src="Seal_of_University_of_California,_Berkeley.svg" alt="UC Davis">
-                            <span class="school-title" contenteditable="true">University of California, Davis</span>
-                        </div>
-                        <div class="degree" contenteditable="true">B.S., Managerial Economics</div>
-                        <div class="degree" contenteditable="true">B.A., English (Poetry emphasis)</div>
-                        <div class="school-name" contenteditable="true">2009</div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Education</h3>
+                    <div class="education-text">
+                        <div class="edu-degree">Master of Radio Journalism</div>
+                        <div class="edu-degree">Master of Photojournalism</div>
+                        <div class="edu-school">University of California, Berkeley | 2013</div>
+                    </div>
+                    <div class="education-text" style="margin-top:12px;">
+                        <div class="edu-degree">B.S., Managerial Economics</div>
+                        <div class="edu-degree">B.A., English (Poetry emphasis)</div>
+                        <div class="edu-school">University of California, Davis | 2009</div>
                     </div>
                 </div>
 
                 <div class="sidebar-section">
                     <h3>Expertise</h3>
                     <ul class="expertise-list">
-                        <li contenteditable="true">Audio &amp; Video Production</li>
-                        <li contenteditable="true">Video Editing</li>
-                        <li contenteditable="true">Podcast Hosting &amp; Production</li>
-                        <li contenteditable="true">Investigative Journalism</li>
-                        <li contenteditable="true">SEO &amp; Audience Growth</li>
-                        <li contenteditable="true">Photojournalism &amp; Editing</li>
-                        <li contenteditable="true">Sound Engineering</li>
-                        <li contenteditable="true">Copy Editing &amp; Script Writing</li>
-                        <li contenteditable="true">Live Broadcasting</li>
-                        <li contenteditable="true">Social Media Strategy</li>
-                        <li contenteditable="true">Team Management</li>
-                        <li contenteditable="true">Mentorship &amp; Training</li>
-                        <li contenteditable="true">Program Development</li>
-                        <li contenteditable="true">Civic Technology</li>
-                        <li contenteditable="true">Media Law &amp; Libel</li>
-                        <li contenteditable="true">Public Records Requests</li>
+                        <li>Audio & Video Production</li>
+                        <li>Video Editing</li>
+                        <li>Podcast Hosting & Production</li>
+                        <li>Investigative Journalism</li>
+                        <li>SEO & Audience Growth</li>
+                        <li>Photojournalism & Editing</li>
+                        <li>Sound Engineering</li>
+                        <li>Copy Editing & Script Writing</li>
+                        <li>Live Broadcasting</li>
+                        <li>Social Media Strategy</li>
+                        <li>Team Management</li>
+                        <li>Mentorship & Training</li>
+                        <li>Program Development</li>
+                        <li>Civic Technology</li>
+                        <li>Media Law & Libel</li>
+                        <li>Public Records Requests</li>
                     </ul>
                 </div>
 
                 <div class="sidebar-section">
-                    <h3>Awards &amp; Accomplishments</h3>
-                    <div class="award-item" contenteditable="true">First Place, Public Media Journalists Association (2024) - Government &amp; Democracy Feature</div>
-                    <div class="award-item" contenteditable="true">Second Place, Public Media Journalists Association (2024) - Special Feature, Economic Impacts</div>
-                    <div class="award-item" contenteditable="true">First Place, Top of the Rockies (2023) - Regional Long-Form Story Editing</div>
-                    <div class="award-item" contenteditable="true">Mark of Excellence, Colorado Broadcasters Association (2023)</div>
-                    <div class="award-item" contenteditable="true">Society of Professional Journalists, Top of the Rockies Mark of Excellence, 2022</div>
-                    <div class="award-item" contenteditable="true">Colorado Broadcasters Association, Top Regional Long Form Story Editing, 2022</div>
-                    <div class="award-item" contenteditable="true">Solutions Journalism Network, Story Selection, 2021</div>
-                    <div class="award-item" contenteditable="true">National Geographic Photo Selection, 2013</div>
-                </div>
-
-                <div class="sidebar-section">
-                    <h3>Proficient In</h3>
-                    <div class="software-grid">
-                        <div class="software-item">
-                            <img src="Adobe_Photoshop_CC_icon.svg" alt="Adobe Suite">
-                            <span>Adobe Suite</span>
-                        </div>
-                        <div class="software-item">
-                            <img src="Adobe_Audition_CC_icon_(2020).svg" alt="Audition">
-                            <span>Audition</span>
-                        </div>
-                        <div class="software-item">
-                            <div style="width:26px;height:26px;background:#7B68EE;border-radius:4px;display:flex;align-items:center;justify-content:center;color:white;font-size:8px;font-weight:bold;">PT</div>
-                            <span>Pro Tools</span>
-                        </div>
-                        <div class="software-item">
-                            <div style="width:26px;height:26px;background:#2563EB;border-radius:6px;display:flex;align-items:center;justify-content:center;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                    <rect x="4" y="5" width="16" height="2.5" rx="1" fill="white"></rect>
-                                    <rect x="4" y="10.5" width="16" height="2.5" rx="1" fill="white"></rect>
-                                    <rect x="4" y="16" width="16" height="2.5" rx="1" fill="white"></rect>
-                                </svg>
-                            </div>
-                            <span>Descript</span>
-                        </div>
-                        <div class="software-item">
-                            <img src="Audacity_Logo.svg" alt="Audacity">
-                            <span>Audacity</span>
-                        </div>
-                        <div class="software-item">
-                            <img src="JavaScript-logo.png" alt="JavaScript">
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="software-item">
-                            <img src="HTML5_logo_and_wordmark.svg" alt="HTML5">
-                            <span>HTML</span>
-                        </div>
-                        <div class="software-item">
-                            <img src="CSS3_logo_and_wordmark.svg" alt="CSS3">
-                            <span>CSS</span>
-                        </div>
-                        <div class="software-item">
-                            <img src="WordPress_blue_logo.svg" alt="WordPress">
-                            <span>WordPress</span>
-                        </div>
-                        <div class="software-item">
-                            <div style="width:26px;height:26px;background:#FF6B35;border-radius:4px;display:flex;align-items:center;justify-content:center;color:white;font-size:7px;font-weight:bold;">Hi</div>
-                            <span>Hindenburg</span>
-                        </div>
-                        <div class="software-item">
-                            <img src="Canon_wordmark.svg" alt="Canon">
-                            <span>Canon</span>
-                        </div>
-                        <div class="software-item">
-                            <div style="width:26px;height:26px;background:#FFD700;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#000;font-size:6px;font-weight:bold;">Nikon</div>
-                            <span>Nikon</span>
-                        </div>
-                        <div class="software-item">
-                            <div style="width:26px;height:26px;background:#000;border-radius:4px;display:flex;align-items:center;justify-content:center;color:white;font-size:7px;font-weight:bold;letter-spacing:-0.5px;">SONY</div>
-                            <span>Sony</span>
-                        </div>
-                        <div class="software-item">
-                            <img src="ChatGPT_logo.svg" alt="ChatGPT">
-                            <span>ChatGPT</span>
-                        </div>
-                        <div class="software-item">
-                            <div style="width:26px;height:26px;background:#D97757;border-radius:4px;display:flex;align-items:center;justify-content:center;color:white;font-size:8px;font-weight:bold;">Cl</div>
-                            <span>Claude</span>
-                        </div>
-                    </div>
+                    <h3>Awards & Accomplishments</h3>
+                    <div class="award-item">First Place, Public Media Journalists Association (2024) - Government & Democracy Feature</div>
+                    <div class="award-item">Second Place, Public Media Journalists Association (2024) - Special Feature, Economic Impacts</div>
+                    <div class="award-item">First Place, Top of the Rockies (2023) - Regional Long-Form Story Editing</div>
+                    <div class="award-item">Mark of Excellence, Colorado Broadcasters Association (2023)</div>
+                    <div class="award-item">Society of Professional Journalists, Top of the Rockies Mark of Excellence, 2022</div>
+                    <div class="award-item">Colorado Broadcasters Association, Top Regional Long Form Story Editing, 2022</div>
+                    <div class="award-item">Solutions Journalism Network, Story Selection, 2021</div>
+                    <div class="award-item">National Geographic Photo Selection, 2013</div>
                 </div>
             </div>
 
             <div class="content">
                 <div class="name-section">
-                    <h1 class="name" contenteditable="true" style="">Alexis H. KENYON</h1>
-                    <div class="tagline" contenteditable="true">Journalist | Creative Storyteller | Editor | Teacher</div>
+                    <div class="name-accent"></div>
+                    <div class="name-text">
+                        <h1 class="name">ALEXIS<br>KENYON</h1>
+                        <div class="tagline">Journalist | Creative Storyteller | Editor | Teacher</div>
+                    </div>
                 </div>
 
                 <div class="about-section">
@@ -714,7 +709,6 @@
                     <div class="experience-item">
                         <div class="exp-date" contenteditable="true">2020 - 2025</div>
                         <div class="exp-content">
-                            <div style="display:inline-block;padding:4px 10px;margin-bottom:6px;font-family:&#39;Arial Black&#39;,sans-serif;font-weight:900;font-size:18px;color:#0066FF;letter-spacing:1px;">KGNU</div>
                             <div class="exp-title" contenteditable="true">Senior News Reporter &amp; Intern Program Coordinator</div>
                             <div class="exp-company" contenteditable="true">KGNU Community Radio - Boulder, CO</div>
                             <ul class="exp-bullets">
@@ -731,7 +725,7 @@
                     <div class="experience-item">
                         <div class="exp-date" contenteditable="true">2015 - Present</div>
                         <div class="exp-content">
-                            <div class="exp-title" contenteditable="true" style="">Freelance Photo/Audio/Documentary Journalist</div>
+                            <div class="exp-title" contenteditable="true">Freelance Photo/Audio/Documentary Journalist</div>
                             <div class="exp-company" contenteditable="true">Various publications including ProPublica and Time</div>
                             <ul class="exp-bullets">
                                 <li contenteditable="true">Investigated and produced stories as a freelance radio reporter and photographer</li>
@@ -744,11 +738,6 @@
                     <div class="experience-item">
                         <div class="exp-date" contenteditable="true">2009 - 2015</div>
                         <div class="exp-content">
-                            <div class="exp-logos" style="gap:6px;">
-                                <div style="background:#c4302b;color:#fff;padding:3px 8px;border-radius:3px;font-family:&#39;Montserrat&#39;,sans-serif;font-weight:700;font-size:11px;">NPR</div>
-                                <div style="background:#000;color:#fff;padding:3px 8px;border-radius:3px;font-family:&#39;Montserrat&#39;,sans-serif;font-weight:700;font-size:11px;">KCRW</div>
-                                <div style="background:#2c5282;color:#fff;padding:3px 8px;border-radius:3px;font-family:&#39;Montserrat&#39;,sans-serif;font-weight:700;font-size:11px;">KFSK</div>
-                            </div>
                             <div class="exp-title" contenteditable="true">Editor / Producer / Reporter / Photographer</div>
                             <div class="exp-company" contenteditable="true">NPR, KCRW (Santa Monica, CA), KFSK-FM (Petersburg, AK)</div>
                             <ul class="exp-bullets">
@@ -762,7 +751,6 @@
                     <div class="experience-item">
                         <div class="exp-date" contenteditable="true">2011 - 2013</div>
                         <div class="exp-content">
-                            <img class="exp-logo" src="Seal_of_University_of_California,_Berkeley.svg" alt="UC Berkeley">
                             <div class="exp-title" contenteditable="true">Chief Photo Editor / Managing Editor / Graduate Researcher</div>
                             <div class="exp-company" contenteditable="true">University of California, Berkeley Graduate School of Journalism</div>
                             <ul class="exp-bullets">
