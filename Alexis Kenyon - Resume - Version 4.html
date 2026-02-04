@@ -116,20 +116,17 @@
             border-bottom: 2px solid #E91E63;
         }
 
-        /* Software pills */
-        .software-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
+        /* Skills grid - clean 2-column layout */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 12px;
         }
 
-        .software-pill {
-            padding: 4px 10px;
-            border-radius: 12px;
-            color: white;
+        .skill-item {
             font-size: 10px;
-            font-weight: 600;
-            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            padding: 2px 0;
         }
 
         /* Education text style */
@@ -608,16 +605,15 @@
 
                 <div class="sidebar-section">
                     <h3>Proficient In</h3>
-                    <div class="software-list">
-                        <span class="software-pill" style="background:#31A8FF;">Photoshop</span>
-                        <span class="software-pill" style="background:#9999FF;">Audition</span>
-                        <span class="software-pill" style="background:#7B68EE;">Pro Tools</span>
-                        <span class="software-pill" style="background:#2563EB;">Descript</span>
-                        <span class="software-pill" style="background:#FF6B35;">Hindenburg</span>
-                        <span class="software-pill" style="background:#F0DB4F;color:#323330;">JavaScript</span>
-                        <span class="software-pill" style="background:#E44D26;">HTML</span>
-                        <span class="software-pill" style="background:#264DE4;">CSS</span>
-                        <span class="software-pill" style="background:#21759B;">WordPress</span>
+                    <div class="skills-grid">
+                        <span class="skill-item">Photoshop</span>
+                        <span class="skill-item">Pro Tools</span>
+                        <span class="skill-item">Audition</span>
+                        <span class="skill-item">Hindenburg</span>
+                        <span class="skill-item">Descript</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">WordPress</span>
                     </div>
                 </div>
 
