@@ -577,11 +577,31 @@
                 box-shadow: none;
                 margin: 0;
                 max-width: 100%;
+                width: 100%;
             }
             [contenteditable="true"]:hover,
             [contenteditable="true"]:focus {
                 background: transparent;
             }
+            /* Prevent page breaks inside sections */
+            .experience-item, .sidebar-section, .education-text, .award-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            /* Keep headings with their content */
+            h2, h3 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+            /* Force page breaks between major sections if needed */
+            .content {
+                page-break-inside: auto;
+            }
+        }
+
+        @page {
+            size: letter;
+            margin: 0.5in;
         }
     </style>
 <meta name="readermode-active" content="true"><meta name="readermode-active" content="true"><meta name="readermode-active" content="true"></head>
