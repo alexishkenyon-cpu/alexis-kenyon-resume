@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexis Kenyon - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 10px;
+            line-height: 1.35;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .resume-container {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header-bar {
+            background: #fafafa;
+            border-bottom: 1px solid #eee;
+            padding: 8px 20px;
+            text-align: center;
+            font-size: 10px;
+            color: #555;
+        }
+
+        .main-content {
+            display: flex;
+            height: calc(100% - 35px);
+        }
+
+        .sidebar {
+            width: 210px;
+            background: #fafafa;
+            padding: 15px 12px;
+            border-right: 1px solid #eee;
+        }
+
+        .profile-image {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .profile-image img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 70%;
+            border: 3px solid #E91E63;
+        }
+
+        .sidebar-section {
+            margin-bottom: 12px;
+        }
+
+        .sidebar-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #E91E63;
+        }
+
+        .education-text {
+            margin-bottom: 8px;
+        }
+
+        .edu-degree {
+            font-size: 9px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .edu-school {
+            font-size: 8px;
+            color: #666;
+            margin-top: 1px;
+        }
+
+        .skills-list {
+            font-size: 9px;
+            color: #333;
+            line-height: 1.5;
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 2px;
+        }
+
+        .skills-list li::before {
+            content: "• ";
+            color: #E91E63;
+        }
+
+        .content {
+            flex: 1;
+            padding: 15px 18px;
+        }
+
+        .name-section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .name-accent {
+            width: 4px;
+            background: #999;
+            margin-right: 12px;
+            align-self: stretch;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: #E91E63;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            color: #555;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 10px;
+        }
+
+        .section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #E91E63;
+        }
+
+        .about-text {
+            font-size: 9px;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        .experience-item {
+            margin-bottom: 10px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .exp-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .exp-date {
+            font-size: 9px;
+            color: #666;
+        }
+
+        .exp-company {
+            font-size: 9px;
+            color: #E91E63;
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            font-size: 9px;
+            color: #444;
+        }
+
+        .exp-bullets li {
+            margin-bottom: 2px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .exp-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #E91E63;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+
+        @page {
+            size: letter;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header-bar">
+            alexishkenyon@gmail.com | 805-798-3839 | www.alexiskenyon.org | Boulder, CO
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="profile-image">
+                    <img src="image.png" alt="Alexis Kenyon">
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Education</h3>
+                    <div class="education-text">
+                        <div class="edu-degree">Master of Radio Journalism</div>
+                        <div class="edu-degree">Master of Photojournalism</div>
+                        <div class="edu-school">University of California, Berkeley | 2013</div>
+                    </div>
+                    <div class="education-text">
+                        <div class="edu-degree">B.S., Managerial Economics</div>
+                        <div class="edu-degree">B.A., English (Poetry emphasis)</div>
+                        <div class="edu-school">University of California, Davis | 2009</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Expertise</h3>
+                    <ul class="skills-list">
+                        <li>Audio & Video Production</li>
+                        <li>Podcast Hosting & Production</li>
+                        <li>Investigative Journalism</li>
+                        <li>Photojournalism & Editing</li>
+                        <li>SEO & Audience Growth</li>
+                        <li>Live Broadcasting</li>
+                        <li>Mentorship & Training</li>
+                        <li>Media Law & Libel</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Awards</h3>
+                    <ul class="skills-list" style="font-size: 8px;">
+                        <li>National Geographic PhotoSelection 2013</li>
+                        <li>SPJ Top of the Rockies 2022</li>
+                        <li>CO Broadcasters Long-form Editing 2022</li>
+                        <li>Solutions Journalism Network 2021</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="name-section">
+                    <div class="name-accent"></div>
+                    <div class="name-text">
+                        <div class="name">ALEXIS KENYON</div>
+                        <div class="title">Journalist | Creative Storyteller | Editor | Teacher</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>About</h2>
+                    <p class="about-text">Award-winning multimedia journalist with 20 years of experience in investigative reporting, podcast production, and audio storytelling. Expert in audio editing, digital content creation, and live broadcast production. Proven track record in audience development and mentoring emerging journalists.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Experience</h2>
+
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="exp-title">VISUAL ARTIST & APP DEVELOPER</span>
+                            <span class="exp-date">2025 - Present</span>
+                        </div>
+                        <div class="exp-company">FireICE.info - Civic Action Web Application</div>
+                        <ul class="exp-bullets">
+                            <li>Built FireICE.info, a browser-based civic action hub enabling users to contact officials and connect with legal aid organizations</li>
+                            <li>Developed advocacy email scripts and compiled legislative contact databases</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="exp-title">SENIOR MULTIMEDIA JOURNALIST & PROGRAM COORDINATOR</span>
+                            <span class="exp-date">2020 - 2025</span>
+                        </div>
+                        <div class="exp-company">KGNU Community Radio - Boulder, CO</div>
+                        <ul class="exp-bullets">
+                            <li>Produced investigative audio content on police accountability, housing policy, and criminal justice</li>
+                            <li>Mentored 20+ interns; graduates placed at 9 News, Colorado Public Radio, This American Life, WAMU</li>
+                            <li>Led digital content strategy, increasing website traffic 300% and doubling social media engagement</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="exp-title">FREELANCE MULTIMEDIA JOURNALIST & PODCAST PRODUCER</span>
+                            <span class="exp-date">2015 - Present</span>
+                        </div>
+                        <div class="exp-company">ProPublica, Time, and various outlets</div>
+                        <ul class="exp-bullets">
+                            <li>Produced investigative audio and photo journalism for national publications</li>
+                            <li>Created and hosted weekly podcast series; managed full production cycle</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="exp-title">EDITOR / PRODUCER / REPORTER / PHOTOGRAPHER</span>
+                            <span class="exp-date">2009 - 2015</span>
+                        </div>
+                        <div class="exp-company">NPR, KCRW, KFSK</div>
+                        <ul class="exp-bullets">
+                            <li>Pitched stories for national audiences, wrote scripts, mixed audio, produced teasers</li>
+                            <li>Guided live interviews, prepared research, and captured quality audio</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="exp-title">CHIEF PHOTO EDITOR / MANAGING EDITOR</span>
+                            <span class="exp-date">2011 - 2013</span>
+                        </div>
+                        <div class="exp-company">UC Berkeley Graduate School of Journalism</div>
+                        <ul class="exp-bullets">
+                            <li>Co-led classes on writing for radio, sound production, and field reporting</li>
+                            <li>Managed team of 20 print and photo journalists; increased radio enrollment to 35 students</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
