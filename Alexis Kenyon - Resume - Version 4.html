@@ -96,7 +96,8 @@
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            object-fit: contain;
+            object-fit: cover;
+            object-position: center center;
             border: 3px solid #E91E63;
         }
 
@@ -115,11 +116,11 @@
             border-bottom: 2px solid #E91E63;
         }
 
-        /* Software Items with Logos - Even 5-column grid */
+        /* Software Items with Logos - 4-column grid */
         .software-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 6px 4px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px 8px;
         }
 
         .software-item {
@@ -130,48 +131,48 @@
         }
 
         .software-item img {
-            width: 26px;
-            height: 26px;
+            width: 30px;
+            height: 30px;
             object-fit: contain;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
         }
 
         .software-item span {
-            font-size: 6px;
+            font-size: 7px;
             text-align: center;
             color: #555;
-            line-height: 1.1;
-            max-width: 38px;
+            line-height: 1.2;
+            max-width: 50px;
         }
 
         .education-item {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .degree {
             font-weight: 600;
-            font-size: 10px;
+            font-size: 9px;
             color: #333;
             margin-left: 2px;
+            line-height: 1.3;
         }
 
         .school-name {
-            font-size: 9px;
+            font-size: 8px;
             color: #888;
             margin-left: 2px;
-            margin-top: 2px;
         }
 
         .school-header {
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 6px;
+            gap: 6px;
+            margin-bottom: 3px;
         }
 
         .school-logo {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
         }
 
         .school-title {
