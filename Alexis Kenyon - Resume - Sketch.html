@@ -154,8 +154,8 @@
         }
 
         .name-accent {
-            width: 6px;
-            background: #FFD700;
+            width: 4px;
+            background: #999;
             margin-right: 12px;
             align-self: stretch;
         }
@@ -606,14 +606,14 @@
                 <div class="sidebar-section">
                     <h3>Proficient In</h3>
                     <div class="skills-grid">
-                        <span class="skill-item">Photoshop</span>
+                        <span class="skill-item">Descript</span>
                         <span class="skill-item">Pro Tools</span>
                         <span class="skill-item">Audition</span>
                         <span class="skill-item">Hindenburg</span>
-                        <span class="skill-item">Descript</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">Photoshop</span>
                         <span class="skill-item">WordPress</span>
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">JavaScript</span>
                     </div>
                 </div>
 
@@ -823,6 +823,19 @@
             </div>
         </div>
 
+        <!-- Image Position Controls -->
+        <div class="toolbar-group">
+            <span class="toolbar-label">Photo Crop</span>
+            <div class="move-controls">
+                <span></span>
+                <button class="move-btn" id="imgUp" title="Move image up">▲</button>
+                <span></span>
+                <button class="move-btn" id="imgLeft" title="Move image left">◀</button>
+                <button class="move-btn" id="imgDown" title="Move image down">▼</button>
+                <button class="move-btn" id="imgRight" title="Move image right">▶</button>
+            </div>
+        </div>
+
         <!-- Add Elements -->
         <div class="toolbar-group">
             <span class="toolbar-label">Add</span>
@@ -983,6 +996,31 @@
                 const current = parseInt(window.getComputedStyle(selectedElement).marginLeft) || 0;
                 selectedElement.style.marginLeft = (current + 2) + 'px';
             }
+        });
+
+        // Image position controls
+        let imgPosX = 50;
+        let imgPosY = 45;
+        const profileImg = document.querySelector('.profile-image img');
+
+        document.getElementById('imgUp').addEventListener('click', function() {
+            imgPosY = Math.max(0, imgPosY - 5);
+            profileImg.style.objectPosition = imgPosX + '% ' + imgPosY + '%';
+        });
+
+        document.getElementById('imgDown').addEventListener('click', function() {
+            imgPosY = Math.min(100, imgPosY + 5);
+            profileImg.style.objectPosition = imgPosX + '% ' + imgPosY + '%';
+        });
+
+        document.getElementById('imgLeft').addEventListener('click', function() {
+            imgPosX = Math.max(0, imgPosX - 5);
+            profileImg.style.objectPosition = imgPosX + '% ' + imgPosY + '%';
+        });
+
+        document.getElementById('imgRight').addEventListener('click', function() {
+            imgPosX = Math.min(100, imgPosX + 5);
+            profileImg.style.objectPosition = imgPosX + '% ' + imgPosY + '%';
         });
 
         // Add bullet point
