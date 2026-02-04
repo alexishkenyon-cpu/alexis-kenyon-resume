@@ -116,23 +116,19 @@
             border-bottom: 2px solid #E91E63;
         }
 
-        /* Compact icon grid */
-        .icon-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
+        /* Software pills */
+        .software-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
         }
 
-        .icon-box {
-            width: 45px;
-            height: 45px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .software-pill {
+            padding: 4px 10px;
+            border-radius: 12px;
             color: white;
-            font-size: 14px;
-            font-weight: 700;
+            font-size: 10px;
+            font-weight: 600;
             font-family: 'Montserrat', sans-serif;
         }
 
@@ -612,16 +608,16 @@
 
                 <div class="sidebar-section">
                     <h3>Proficient In</h3>
-                    <div class="icon-grid">
-                        <div class="icon-box" style="background:#31A8FF;" title="Photoshop">Ps</div>
-                        <div class="icon-box" style="background:#9999FF;" title="Audition">Au</div>
-                        <div class="icon-box" style="background:#7B68EE;" title="Pro Tools">PT</div>
-                        <div class="icon-box" style="background:#2563EB;" title="Descript">De</div>
-                        <div class="icon-box" style="background:#FF6B35;" title="Hindenburg">Hi</div>
-                        <div class="icon-box" style="background:#F0DB4F;color:#323330;" title="JavaScript">JS</div>
-                        <div class="icon-box" style="background:#E44D26;" title="HTML">H5</div>
-                        <div class="icon-box" style="background:#264DE4;" title="CSS">CS</div>
-                        <div class="icon-box" style="background:#21759B;" title="WordPress">WP</div>
+                    <div class="software-list">
+                        <span class="software-pill" style="background:#31A8FF;">Photoshop</span>
+                        <span class="software-pill" style="background:#9999FF;">Audition</span>
+                        <span class="software-pill" style="background:#7B68EE;">Pro Tools</span>
+                        <span class="software-pill" style="background:#2563EB;">Descript</span>
+                        <span class="software-pill" style="background:#FF6B35;">Hindenburg</span>
+                        <span class="software-pill" style="background:#F0DB4F;color:#323330;">JavaScript</span>
+                        <span class="software-pill" style="background:#E44D26;">HTML</span>
+                        <span class="software-pill" style="background:#264DE4;">CSS</span>
+                        <span class="software-pill" style="background:#21759B;">WordPress</span>
                     </div>
                 </div>
 
